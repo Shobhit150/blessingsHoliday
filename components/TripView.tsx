@@ -39,7 +39,7 @@ const tripData: Record<string, {
 }
 
 const Details = () => {
-    const [selectedMonth, setSelectedMonth] = useState('July')
+    const [selectedMonth, setSelectedMonth] = useState('July 2025')
 
     return (
         <div className="px-4 py-8 max-w-[1150px] m-auto">
@@ -69,39 +69,45 @@ const Details = () => {
 
             {/* Trip Cards (Scrollable Horizontally) */}
             <div className="py-2 px-2">
-                <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:auto-rows-fr space-x-4 md:space-x-0 overflow-x-auto md:overflow-visible w-max md:w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-                    {(tripData[selectedMonth] || []).map((trip, index) => (
-                        <motion.div
-                            key={index}
-                            className="min-w-[340px] md:min-w-[360px] max-w-xs bg-white overflow-hidden flex-shrink-0 md:m-auto"
-                            whileHover={{ scale: 1.02 }}
-                        >
-                            <Image
-                                src={trip.image}
-                                alt={trip.title}
-                                width={200}
-                                height={200}
-                                className="w-full h-[300px] rounded-lg object-cover"
-                            />
-                            <div className="mt-4">
-                                <h3 className="text-lg font-semibold">{trip.title}</h3>
-                                <p className="text-sm text-gray-600">{trip.location}</p>
-                                <p className="text-sm text-gray-600">{trip.date}</p>
-                                <p className="text-blue-600 font-semibold mt-2">{trip.price}</p>
-                                <Link
-                                    href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip in ${trip.date}.`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded-md text-sm hover:bg-green-700 transition"
-                                >
-                                    Book on WhatsApp
-                                </Link>
-                            </div>
-                        </motion.div>
-                    ))}
-                    {(tripData[selectedMonth] || []).length === 0 && (
-                        <p className="text-gray-500 col-span-full">No trips available for {selectedMonth}</p>
-                    )}
+                <div className="overflow-x-auto md:overflow-visible [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+                    <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-max md:w-full">
+
+
+
+                        {(tripData[selectedMonth] || []).map((trip, index) => (
+                            <motion.div
+                                key={index}
+                                className="min-w-[340px] md:min-w-[360px] max-w-xs bg-white overflow-hidden flex-shrink-0 md:m-auto"
+                                whileHover={{ scale: 1.02 }}
+                            >
+                                <Image
+                                    src={trip.image}
+                                    alt={trip.title}
+                                    width={200}
+                                    height={200}
+                                    className="w-full h-[300px] rounded-lg object-cover"
+                                />
+                                <div className="mt-4">
+                                    <h3 className="text-lg font-semibold">{trip.title}</h3>
+                                    <p className="text-sm text-gray-600">{trip.location}</p>
+                                    <p className="text-sm text-gray-600">{trip.date}</p>
+                                    <p className="text-blue-600 font-semibold mt-2">{trip.price}</p>
+                                    <Link
+                                        href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip in ${trip.date}.`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded-md text-sm hover:bg-green-700 transition"
+                                    >
+                                        Book on WhatsApp
+                                    </Link>
+                                </div>
+                            </motion.div>
+                        ))}
+                        {(tripData[selectedMonth] || []).length === 0 && (
+                            <p className="text-gray-500 col-span-full">No trips available for {selectedMonth}</p>
+                        )}
+
+                    </div>
                 </div>
             </div>
 
