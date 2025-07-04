@@ -30,7 +30,7 @@ const tripData: Record<string, {
             image: "/images/trip1.JPG"
         }
     ],
-    August: [
+    'August 2025': [
         {
             title: "Leh-Ladakh Roadtrip", location: "Ladakh", date: "15-24 August", price: "₹29,999",
             image: "/images/trip1.JPG"

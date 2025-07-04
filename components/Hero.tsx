@@ -46,13 +46,20 @@ const Hero = () => {
                 {videos.map((src, idx) => (
                     <video
                         key={idx}
-                        ref={(el) => void (videoRef.current[idx] = el!)}
+                        ref={(el) => {
+                            if (el) {
+                                el.playbackRate = 0.8
+                                videoRef.current[idx] = el
+                            }
+                        }}
                         src={src}
                         autoPlay
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover absolute animate-fade-in"
+                        preload="auto"
+                        disableRemotePlayback
+                        className="w-full h-full object-cover absolute"
                     />
                 ))}
             </div>
