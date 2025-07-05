@@ -6,8 +6,14 @@ import Image from 'next/image'
 import React from 'react'
 import { FaClock, FaMapMarkerAlt, FaHiking, FaCampground, FaUtensils, FaBus, FaFire } from 'react-icons/fa'
 
-const TripDetail = ({ params }: { params: { slug: string } }) => {
+
+type Props = {
+  params: { slug: string }
+}
+
+export default async function TripDetail({ params }: Props) {
   const trip = trips.find((t) => t.slug === params.slug)
+
   if (!trip) return notFound()
 
   return (
@@ -117,4 +123,4 @@ const TripDetail = ({ params }: { params: { slug: string } }) => {
   )
 }
 
-export default TripDetail
+
