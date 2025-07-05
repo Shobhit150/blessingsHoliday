@@ -6,7 +6,7 @@ import Image from 'next/image'
 const ContactUs = () => {
     return (
 
-        <div id="#ContactUs" className="flex pt-6 pb-2 flex-col md:flex-row max-w-[1100px] m-auto bg-[url('/images/background.avif')] bg-cover bg-center rounded-[30px] items-center justify-center">
+        <div id="#ContactUs" className="flex pt-6 pb-2 flex-col md:flex-row max-w-[1100px] m-auto bg-[url('/images/yellow-paper-bg.webp')] bg-cover bg-center rounded-[30px] items-center justify-center">
 
             {/* Left: Image */}
             <div className="md:w-1/2 flex flex-col items-center justify-center">
