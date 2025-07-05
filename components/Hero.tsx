@@ -14,7 +14,7 @@ const rotatingWords = [
 ]
 
 const Hero = () => {
-    const videoRef = useRef<HTMLVideoElement[]>([])
+   
     const [index, setIndex] = useState(0)
 
     
