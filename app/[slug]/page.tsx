@@ -1,17 +1,17 @@
-'use client'
-
+import { notFound } from 'next/navigation'
 import { trips } from '@/lib/tripData'
-import { notFound, useParams } from 'next/navigation'
 import Image from 'next/image'
-import React from 'react'
-import { FaClock, FaMapMarkerAlt, FaHiking, FaCampground, FaUtensils, FaBus, FaFire } from 'react-icons/fa'
+import {
+  FaClock,
+  FaMapMarkerAlt,
+  FaHiking,
+  FaCampground,
+  FaUtensils,
+  FaBus,
+  FaFire
+} from 'react-icons/fa'
 
-
-type Props = {
-  params: { slug: string }
-}
-
-export default async function TripDetail({ params }: Props) {
+export default function TripDetail({ params }: { params: { slug: string } }) {
   const trip = trips.find((t) => t.slug === params.slug)
 
   if (!trip) return notFound()
@@ -20,7 +20,13 @@ export default async function TripDetail({ params }: Props) {
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-10">
       <h1 className="text-3xl font-bold text-center">{trip.title}</h1>
 
-      <Image src={trip.image} alt={trip.title} width={1200} height={500} className="rounded-lg w-full h-[300px] object-cover" />
+      <Image
+        src={trip.image}
+        alt={trip.title}
+        width={1200}
+        height={500}
+        className="rounded-lg w-full h-[300px] object-cover"
+      />
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm md:text-base">
         <div className="flex items-center gap-2">
@@ -55,72 +61,70 @@ export default async function TripDetail({ params }: Props) {
       </div>
 
       {/* Overview */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Overview</h2>
         <p className="text-gray-700 leading-6">{trip.overview}</p>
-      </div>
+      </section>
 
       {/* Itinerary */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Itinerary</h2>
         <ul className="list-disc pl-6 space-y-1">
           {trip.itinerary.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
         </ul>
-      </div>
+      </section>
 
       {/* Inclusions */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Inclusions</h2>
         <ul className="list-disc pl-6 space-y-1">
           {trip.inclusions.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
-      </div>
+      </section>
 
       {/* Exclusions */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Exclusions</h2>
         <ul className="list-disc pl-6 space-y-1">
           {trip.exclusions.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
-      </div>
+      </section>
 
       {/* Batches */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Available Batches</h2>
         <ul className="list-disc pl-6 space-y-1">
           {trip.batches.map((b, i) => (
             <li key={i}>{b}</li>
           ))}
         </ul>
-      </div>
+      </section>
 
       {/* Price Summary */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Price Summary</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="p-4 border rounded-md">Quad Sharing: {trip.priceSummary.quad}</div>
           <div className="p-4 border rounded-md">Triple Sharing: {trip.priceSummary.triple}</div>
           <div className="p-4 border rounded-md">Double Sharing: {trip.priceSummary.double}</div>
         </div>
-      </div>
+      </section>
 
       {/* Things to Pack */}
-      <div>
+      <section>
         <h2 className="text-2xl font-semibold mb-2">Things to Pack</h2>
         <ul className="list-disc pl-6 space-y-1">
           {trip.thingsToPack.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
         </ul>
-      </div>
+      </section>
     </div>
   )
 }
-
-

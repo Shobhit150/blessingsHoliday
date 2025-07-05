@@ -9,17 +9,21 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const nextRules = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
-
 export default [
-  ...nextRules,
+  ...compat.extends(
+    "next/core-web-vitals",
+    "next",
+    "next/typescript"
+  ),
   {
     rules: {
       // ✅ Downgrade from error → warning
       "no-unused-vars": "warn",
       "@typescript-eslint/no-unused-vars": "warn",
+
+      // 🔧 (Optional) Soften common strict rules
+      "react/display-name": "off",
+      "react/prop-types": "off",
     },
   },
 ];
