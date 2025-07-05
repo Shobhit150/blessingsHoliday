@@ -1,8 +1,8 @@
 import Details from "@/components/TripView";
 import Hero from "@/components/Hero";
 import ContactUs from "@/components/ContactUs";
+import TripSteps from "@/components/TripSteps"
 import Footer from "@/components/Footer";
-
 
 export default function Home() {
   return (
@@ -10,9 +10,13 @@ export default function Home() {
       <Hero />
       <Details/>
       <div className="p-4">
+        
       <ContactUs/>
       </div>
+      <TripSteps/>
+
       <Footer/>
+
       
     </div>
   );

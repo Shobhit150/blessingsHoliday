@@ -71,7 +71,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className="md:hidden">
-          <IoMdMenu size={28} className="cursor-pointer" onClick={() => setIsOpen(true)} />
+          <IoMdMenu size={28} className="cursor-pointer text-black" onClick={() => setIsOpen(true)} />
         </div>
 
         {/* Mobile Menu Overlay */}
@@ -85,7 +85,7 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
             >
               <div className="flex justify-end px-6 py-4">
-                <IoMdClose size={28} className="cursor-pointer" onClick={() => setIsOpen(false)} />
+                <IoMdClose size={28} className="cursor-pointer text-black" onClick={() => setIsOpen(false)} />
               </div>
               <div className="flex flex-col gap-5 items-center justify-center pb-6 text-gray-700 text-sm font-medium">
                 {menuLinks.map(link => (
