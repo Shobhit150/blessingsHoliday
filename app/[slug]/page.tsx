@@ -1,7 +1,5 @@
-// app/trips/[slug]/page.tsx
-
-import { trips } from '@/lib/tripData'
 import { notFound } from 'next/navigation'
+import { trips } from '@/lib/tripData'
 import Image from 'next/image'
 import {
   FaClock,
@@ -10,12 +8,13 @@ import {
   FaCampground,
   FaUtensils,
   FaBus,
-  FaFire
+  FaFire,
 } from 'react-icons/fa'
 
-// ✅ Server Component: receives `params` directly from Next.js
-export default function TripDetail({ params }: { params: { slug: string } }) {
-  const trip = trips.find((t) => t.slug === params.slug)
+// ✅ Unwrap params using async/await as required in Next.js 15+
+export default async function TripDetail({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const trip = trips.find((t) => t.slug === slug)
 
   if (!trip) return notFound()
 
@@ -32,65 +31,95 @@ export default function TripDetail({ params }: { params: { slug: string } }) {
       />
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm md:text-base">
-        <Info icon={<FaClock />} label={`Duration: ${trip.duration}`} />
-        <Info icon={<FaMapMarkerAlt />} label={`Pickup: ${trip.pickup}`} />
-        <Info icon={<FaHiking />} label={`Category: ${trip.category}`} />
-        {trip.tags.includes('Stay') && <Info icon={<FaCampground />} label="Stay Included" />}
-        {trip.tags.includes('Bonfire') && <Info icon={<FaFire />} label="Bonfire" />}
-        {trip.tags.includes('Transfers') && <Info icon={<FaBus />} label="Transfers" />}
-        {trip.tags.includes('Meals') && <Info icon={<FaUtensils />} label="Meals Included" />}
+        <div className="flex items-center gap-2">
+          <FaClock /> <span>Duration: {trip.duration}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <FaMapMarkerAlt /> <span>Pickup: {trip.pickup}</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <FaHiking /> <span>Category: {trip.category}</span>
+        </div>
+        {trip.tags.includes('Stay') && (
+          <div className="flex items-center gap-2">
+            <FaCampground /> <span>Stay Included</span>
+          </div>
+        )}
+        {trip.tags.includes('Bonfire') && (
+          <div className="flex items-center gap-2">
+            <FaFire /> <span>Bonfire</span>
+          </div>
+        )}
+        {trip.tags.includes('Transfers') && (
+          <div className="flex items-center gap-2">
+            <FaBus /> <span>Transfers</span>
+          </div>
+        )}
+        {trip.tags.includes('Meals') && (
+          <div className="flex items-center gap-2">
+            <FaUtensils /> <span>Meals Included</span>
+          </div>
+        )}
       </div>
 
-      <Section title="Overview">
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Overview</h2>
         <p className="text-gray-700 leading-6">{trip.overview}</p>
-      </Section>
+      </section>
 
-      <Section title="Itinerary">
-        <List items={trip.itinerary} />
-      </Section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Itinerary</h2>
+        <ul className="list-disc pl-6 space-y-1">
+          {trip.itinerary.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
+      </section>
 
-      <Section title="Inclusions">
-        <List items={trip.inclusions} />
-      </Section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Inclusions</h2>
+        <ul className="list-disc pl-6 space-y-1">
+          {trip.inclusions.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </section>
 
-      <Section title="Exclusions">
-        <List items={trip.exclusions} />
-      </Section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Exclusions</h2>
+        <ul className="list-disc pl-6 space-y-1">
+          {trip.exclusions.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </section>
 
-      <Section title="Available Batches">
-        <List items={trip.batches} />
-      </Section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Available Batches</h2>
+        <ul className="list-disc pl-6 space-y-1">
+          {trip.batches.map((b, i) => (
+            <li key={i}>{b}</li>
+          ))}
+        </ul>
+      </section>
 
-      <Section title="Price Summary">
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Price Summary</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="p-4 border rounded-md">Quad Sharing: {trip.priceSummary.quad}</div>
           <div className="p-4 border rounded-md">Triple Sharing: {trip.priceSummary.triple}</div>
           <div className="p-4 border rounded-md">Double Sharing: {trip.priceSummary.double}</div>
         </div>
-      </Section>
+      </section>
 
-      <Section title="Things to Pack">
-        <List items={trip.thingsToPack} />
-      </Section>
+      <section>
+        <h2 className="text-2xl font-semibold mb-2">Things to Pack</h2>
+        <ul className="list-disc pl-6 space-y-1">
+          {trip.thingsToPack.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      </section>
     </div>
   )
 }
-
-// ✅ Reusable Components
-
-const Info = ({ icon, label }: { icon: React.ReactNode; label: string }) => (
-  <div className="flex items-center gap-2">{icon} <span>{label}</span></div>
-)
-
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <section>
-    <h2 className="text-2xl font-semibold mb-2">{title}</h2>
-    {children}
-  </section>
-)
-
-const List = ({ items }: { items: string[] }) => (
-  <ul className="list-disc pl-6 space-y-1">
-    {items.map((item, i) => <li key={i}>{item}</li>)}
-  </ul>
-)
