@@ -1,6 +1,7 @@
 import Details from "@/components/TripView";
 import Hero from "@/components/Hero";
 import ContactUs from "@/components/ContactUs";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="p-4">
       <ContactUs/>
       </div>
+      <Footer/>
       
     </div>
   );
