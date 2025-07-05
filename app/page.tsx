@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ContactUs from "@/components/ContactUs";
 import TripSteps from "@/components/TripSteps"
 import Footer from "@/components/Footer";
+import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         
       <ContactUs/>
       </div>
+      <FaqSection/>
       <TripSteps/>
 
       <Footer/>

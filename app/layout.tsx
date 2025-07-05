@@ -29,10 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        Work under progress
-        {/* <Navbar />
+        
+        <Navbar />
         {children}
-        <BottomStickyBar /> */}
+        <BottomStickyBar />
       </body>
     </html>
   );
