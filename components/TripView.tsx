@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { trips } from '@/lib/tripData'
 
-const months = ['July 2025', 'August 2025', 'September 2025', 'October 2025', 'November 2025', 'December 2025']
+const months = ['July 2025', 'August 2025', 'September 2025', 'October 2025']
 const whatsappNumber = '919140772033'
 
 const Details = () => {
@@ -13,10 +13,10 @@ const Details = () => {
     const filteredTrips = trips.filter(trip => trip.tag === selectedMonth)
 
     return (
-        <div className="px-4 py-8 max-w-[1100px] m-auto -mt-[52px] ">
+        <div className="px-4 py-8 max-w-[1100px] m-auto -mt-[46px] md:-mt-[55px] ">
             {/* Month Selector */}
             <motion.div
-                className=" relative z-30 flex overflow-x-auto no-scrollbar justify-center"
+                className=" relative z-30 flex overflow-x-auto no-scrollbar px-4 sm:justify-center"
                 drag="x"
                 dragConstraints={{ left: -300, right: 0 }}
             >
@@ -25,7 +25,7 @@ const Details = () => {
                     key={month}
                     onClick={() => setSelectedMonth(month)}
                     className={`
-                      px-4 py-2 text-sm border whitespace-nowrap transition-colors duration-200
+                      px-2 py-2 md:px-6 md:py-4 text-sm border whitespace-nowrap transition-colors duration-200
                       ${selectedMonth === month
                         ? 'bg-orange-600 text-white border-orange-500'
                         : 'bg-white text-black border-gray-300 hover:bg-gray-100'}
@@ -36,7 +36,7 @@ const Details = () => {
                   
                 ))}
             </motion.div>
-            <h2 className="text-2xl font-bold mb-4 text-center">
+            <h2 className="text-2xl font-bold mb-4 text-center mt-10">
                 Upcoming Group Trips For You 🥳
             </h2>
 

@@ -49,7 +49,7 @@ export default function SearchOptions() {
                         <div className='flex w-full items-center justify-center '>
                             
                             <ComboboxInput
-                                className="w-full outline-none px-4 py-4 bg-white/40 placeholder:text-white"
+                                className="w-full outline-none px-4 py-4 bg-white/40 placeholder:text-white text-white"
                                 onChange={(event) => setQuery(event.target.value)}
                                 placeholder="Pick Best Suitable Package"
                                 displayValue={() => selected}
