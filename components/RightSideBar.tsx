@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const RightSideBar = () => {
   return (
-    <div className=" fixed right-0 bottom-[100px] w-[60px] z-40 overflow-y-auto p-2 flex flex-col items-center gap-6">
+    <div className=" fixed right-0 bottom-[50vh] w-[60px] z-40 overflow-y-auto p-2 flex flex-col items-center gap-6">
       <Link
         href="https://www.instagram.com/Blessings_holiday_"
         target="_blank"
@@ -27,8 +27,8 @@ const RightSideBar = () => {
         <Image
           src="/icons/WhatsApp.webp"
           alt="WhatsApp"
-          width={35}
-          height={35}
+          width={38}
+          height={38}
           className="hover:scale-110 transition"
         />
       </Link>
