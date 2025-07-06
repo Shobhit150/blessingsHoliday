@@ -24,7 +24,7 @@ const PackagePage = () => {
           >
             <Link href={`/trips/${trip.slug}`} className="block group">
               <Image
-                src={trip.image}
+                src={trip.image[0]}
                 alt={trip.title}
                 width={400}
                 height={250}
