@@ -51,7 +51,7 @@ const Details = () => {
                 >
                   <Link href={`/trips/${trip.slug}`} className="block">
                     <Image
-                      src={trip.image}
+                      src={trip.image[0]}
                       alt={trip.title}
                       width={200}
                       height={200}

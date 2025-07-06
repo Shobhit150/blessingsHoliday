@@ -3,12 +3,13 @@ export interface Trip {
     tag: string
     slug: string
     title: string
+    disclosed: boolean
     location: string
     date: string
     startDate: string
     endDate: string
     price: string
-    image: string
+    image: string[]
     duration: string
     pickup: string
     category: string
@@ -18,11 +19,6 @@ export interface Trip {
     inclusions: string[]
     exclusions: string[]
     batches: string[]
-    priceSummary: {
-      quad: string
-      triple: string
-      double: string
-    }
     thingsToPack: string[]
   }
   
@@ -32,12 +28,13 @@ export interface Trip {
       tag: "July 2025",
       slug: "corbett-nainital",
       title: "Jim Corbett & Nainital",
+      disclosed: true,
       location: "Uttarakhand",
       date: "18 Jul 2025 - 20 Jul 2025",
       startDate: "2025-07-18",
       endDate: "2025-07-20",
       price: "₹9,999",
-      image: "/trips_image/corbett_1.webp",
+      image: ["/trips_image/jim2.webp","/trips_image/jim3.webp","/trips_image/jim4.webp"],
       duration: "2 Nights 3 Days",
       pickup: "Delhi-Delhi",
       category: "Weekend Trips",
@@ -69,11 +66,7 @@ export interface Trip {
         "18 Jul 2025 - 20 Jul 2025",
         
       ],
-      priceSummary: {
-        quad: "₹7,500",
-        triple: "₹8,200",
-        double: "₹9,000"
-      },
+      
       thingsToPack: [
         "Rucksack with rain-cover",
         "Trekking shoes",
@@ -89,12 +82,13 @@ export interface Trip {
       tag: "July 2025",
       slug: "sarika-tiger-crocodile",
       title: "Sariska Tiger and crocodile",
+      disclosed: false,
       location: "Rajasthan",
       date: "Not decided",
       startDate: "2025-07-25",
       endDate: "2025-07-30",
       price: "₹4,999",
-      image: "/trips_image/sarika.webp",
+      image: ["/trips_image/sarika.webp",],
       duration: "2 Days 1 Nights",
       pickup: "Delhi",
       category: "Jungle",
@@ -126,11 +120,6 @@ export interface Trip {
         "25 Jul 2025 - 30 Jul 2025",
         "1 Aug 2025 - 6 Aug 2025"
       ],
-      priceSummary: {
-        quad: "₹13,499",
-        triple: "₹14,999",
-        double: "₹16,999"
-      },
       thingsToPack: [
         "Beachwear & Casuals",
         "Sunscreen & Sunglasses",

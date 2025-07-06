@@ -5,9 +5,11 @@ import { notFound } from 'next/navigation'
 import { useParams } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import {
   FaClock, FaMapMarkerAlt, FaHiking, FaCampground,
-  FaUtensils, FaBus, FaFire, FaWhatsapp, FaFileDownload
+  FaUtensils, FaBus, FaFire, FaWhatsapp, FaFileDownload,
+  FaChevronLeft, FaChevronRight
 } from 'react-icons/fa'
 
 const whatsappNumber = '917838800808'
@@ -17,21 +19,79 @@ const TripDetail = () => {
   const slug = params?.slug as string
   const trip = trips.find(t => t.slug === slug)
 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+
+  const startSlider = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current)
+    intervalRef.current = setInterval(() => {
+      setCurrentImageIndex(prev => (prev + 1) % (trip?.image.length || 1))
+    }, 5000)
+  }
+
+  useEffect(() => {
+    if (trip?.image?.length) {
+      startSlider()
+    }
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current)
+    }
+  }, [trip?.image])
+
   if (!trip) return notFound()
+
+  const images = Array.isArray(trip.image) ? trip.image : [trip.image]
+
+  const handleArrowClick = (direction: 'left' | 'right') => {
+    setCurrentImageIndex(prev => {
+      const newIndex =
+        direction === 'left'
+          ? (prev - 1 + images.length) % images.length
+          : (prev + 1) % images.length
+      return newIndex
+    })
+    startSlider()
+  }
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10 space-y-12 text-gray-800">
-      {/* Title */}
       <h1 className="text-3xl md:text-4xl font-extrabold text-center text-orange-700">{trip.title}</h1>
 
-      {/* Banner */}
-      <Image
-        src={trip.image}
-        alt={trip.title}
-        width={1200}
-        height={500}
-        className="rounded-xl w-full h-[400px] md:h-[500px] object-cover shadow-lg"
-      />
+      {/* Image Slider */}
+      <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden shadow-lg">
+        <Image
+          src={images[currentImageIndex]}
+          alt={`Slide ${currentImageIndex + 1}`}
+          fill
+          className="object-cover rounded-xl"
+        />
+      </div>
+
+      {/* Arrows & Dots */}
+      <div className="flex justify-center items-center gap-6 mt-4">
+        <button
+          onClick={() => handleArrowClick('left')}
+          className="bg-white/80 p-2 rounded-full shadow hover:scale-110 transition"
+        >
+          <FaChevronLeft />
+        </button>
+
+        <div className="flex gap-2">
+          {images.map((_, idx) => (
+            <span
+              key={idx}
+              className={`w-3 h-3 rounded-full transition duration-300 ${idx === currentImageIndex ? 'bg-black' : 'bg-gray-400/50'}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={() => handleArrowClick('right')}
+          className="bg-white/80 p-2 rounded-full shadow hover:scale-110 transition"
+        >
+          <FaChevronRight />
+        </button>
+      </div>
 
       {/* CTA */}
       <div className="text-center mt-4 space-y-4">
@@ -57,74 +117,71 @@ const TripDetail = () => {
         </div>
       </div>
 
-      {/* Highlights */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm md:text-base font-medium">
-        <TripInfo icon={<FaClock />} label={trip.duration} />
-        <TripInfo icon={<FaMapMarkerAlt />} label={`Pickup: ${trip.pickup}`} />
-        <TripInfo icon={<FaHiking />} label={trip.category} />
-        {trip.tags.includes('Stay') && <TripInfo icon={<FaCampground />} label="Stay Included" />}
-        {trip.tags.includes('Bonfire') && <TripInfo icon={<FaFire />} label="Bonfire" />}
-        {trip.tags.includes('Transfers') && <TripInfo icon={<FaBus />} label="Transfers" />}
-        {trip.tags.includes('Meals') && <TripInfo icon={<FaUtensils />} label="Meals Included" />}
-      </div>
-
-      {/* Overview */}
-      <Section title="📝 Trip Overview">
-        <p className="text-gray-700 leading-7">{trip.overview}</p>
-      </Section>
-
-      {/* Itinerary */}
-      <Section title="🗓️ Day-wise Itinerary">
-        <ul className="list-disc pl-6 space-y-1 text-gray-700">
-          {trip.itinerary.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* Inclusions */}
-      <Section title="✅ What's Included">
-        <ul className="list-disc pl-6 space-y-1 text-gray-700">
-          {trip.inclusions.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* Exclusions */}
-      <Section title="❌ Exclusions">
-        <ul className="list-disc pl-6 space-y-1 text-gray-700">
-          {trip.exclusions.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* Batches */}
-      <Section title="📅 Upcoming Batches">
-        <ul className="list-disc pl-6 space-y-1 text-gray-700">
-          {trip.batches.map((b, i) => (
-            <li key={i}>{b}</li>
-          ))}
-        </ul>
-      </Section>
-
-      {/* Price Summary */}
+      {/* Always show price */}
       <Section title="💰 Price Summary (per person)">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
           <PriceBox label="Double/Triple Sharing" value={trip.price} />
-          
         </div>
       </Section>
 
-      {/* Packing */}
-      <Section title="🎒 Things to Pack">
-        <ul className="list-disc pl-6 space-y-1 text-gray-700">
-          {trip.thingsToPack.map((item, i) => (
-            <li key={i}>{item}</li>
-          ))}
-        </ul>
-      </Section>
+      {/* If not disclosed, hide rest */}
+      {!trip.disclosed ? null : (
+        <>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm md:text-base font-medium">
+            <TripInfo icon={<FaClock />} label={trip.duration} />
+            <TripInfo icon={<FaMapMarkerAlt />} label={`Pickup: ${trip.pickup}`} />
+            <TripInfo icon={<FaHiking />} label={trip.category} />
+            {trip.tags.includes('Stay') && <TripInfo icon={<FaCampground />} label="Stay Included" />}
+            {trip.tags.includes('Bonfire') && <TripInfo icon={<FaFire />} label="Bonfire" />}
+            {trip.tags.includes('Transfers') && <TripInfo icon={<FaBus />} label="Transfers" />}
+            {trip.tags.includes('Meals') && <TripInfo icon={<FaUtensils />} label="Meals Included" />}
+          </div>
+
+          <Section title="📝 Trip Overview">
+            <p className="text-gray-700 leading-7">{trip.overview}</p>
+          </Section>
+
+          <Section title="🗓️ Day-wise Itinerary">
+            <ul className="list-disc pl-6 space-y-1 text-gray-700">
+              {trip.itinerary.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="✅ What's Included">
+            <ul className="list-disc pl-6 space-y-1 text-gray-700">
+              {trip.inclusions.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="❌ Exclusions">
+            <ul className="list-disc pl-6 space-y-1 text-gray-700">
+              {trip.exclusions.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="📅 Upcoming Batches">
+            <ul className="list-disc pl-6 space-y-1 text-gray-700">
+              {trip.batches.map((b, i) => (
+                <li key={i}>{b}</li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section title="🎒 Things to Pack">
+            <ul className="list-disc pl-6 space-y-1 text-gray-700">
+              {trip.thingsToPack.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </Section>
+        </>
+      )}
     </div>
   )
 }
