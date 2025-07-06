@@ -54,7 +54,7 @@ export default function SearchOptions() {
                                 displayValue={() => selected}
                             />
                         </div>
-                        <div className=' px-6 py-4 bg-orange-600 text-white'>
+                        <div className=' px-6 py-4 bg-[#f7ce51] text-white'>
                             SEARCH
                         </div>
                     </div>
