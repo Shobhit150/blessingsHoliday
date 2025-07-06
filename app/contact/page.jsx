@@ -96,7 +96,7 @@ const ContactPage = () => {
           type="submit"
           className="bg-orange-600 text-white py-2 px-6 rounded-lg font-semibold hover:bg-orange-700 transition"
         >
-          Contact via Gmail
+          Open in Gmail & Send
         </button>
       </form>
 
