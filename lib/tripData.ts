@@ -4,6 +4,7 @@ export interface Trip {
   slug: string
   title: string
   disclosed: boolean
+  discription: string
   location: string
   date: string
   startDate: string
@@ -29,6 +30,7 @@ export const trips: Trip[] = [
     slug: "corbett-nainital",
     title: "Jim Corbett & Nainital",
     disclosed: true,
+    discription: "Ready to see Mountains?",
     location: "Uttarakhand",
     date: "18 Jul 2025 - 20 Jul 2025",
     startDate: "2025-07-18",
@@ -81,12 +83,13 @@ export const trips: Trip[] = [
     slug: "sarika-tiger-crocodile",
     title: "Sariska & Siliserh",
     disclosed: false,
+    discription: "Ready for crocodile sighting?",
     location: "Rajasthan",
     date: "Not decided",
     startDate: "not Decided",
     endDate: "not Decided",
     price: "₹4,999",
-    image: ["/trips_image/sarika.webp"],
+    image: ["/trips_image/sarika1.webp","/trips_image/sarika2.webp","/trips_image/sarika3.webp","/trips_image/sarika4.webp"],
     duration: "1 Night 2 Days",
     pickup: "Delhi",
     category: "Jungle",

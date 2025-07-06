@@ -95,7 +95,9 @@ const TripDetail = () => {
 
       {/* CTA */}
       <div className="text-center mt-4 space-y-4">
-        <p className="text-xl font-semibold">🎒 Ready to make memories?</p>
+      <p className="text-xl font-semibold">{trip.discription}</p>
+
+
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip on ${trip.date}.`}
