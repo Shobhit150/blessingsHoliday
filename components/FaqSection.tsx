@@ -11,56 +11,57 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'What adventure activities to enjoy in Himachal Pradesh?',
+    question: 'How do I book a trip with Blessings Holiday?',
     answer:
-      'You can enjoy trekking, paragliding, skiing, river rafting, and mountain biking, especially in areas like Manali and Kullu.',
+      'Booking is super simple! Just click on the "Book on WhatsApp" button on your desired trip, and our team will assist you instantly.',
   },
   {
-    question: 'What are the local delicacies to try in Himachal Pradesh?',
+    question: 'Are your trips suitable for solo travelers or only groups?',
     answer:
-      'Try dishes like Siddu, Chana Madra, Babru, Dham, and Tudkiya Bhath for a true Himachali taste.',
+      'Our trips are perfect for both solo travelers and groups. Many of our clients come solo and leave with lifelong friends.',
   },
   {
-    question: 'What shopping items to shop for in Himachal?',
+    question: 'What kind of accommodation is provided during trips?',
     answer:
-      'Woollen shawls, Tibetan handicrafts, wooden artifacts, and handmade jewelry are popular buys.',
+      'We provide clean, comfortable stays ranging from hotels to guesthouses or camps, depending on the destination and weather.',
   },
   {
-    question: 'What to pack for a trip to Himachal?',
+    question: 'What does the trip cost include?',
     answer:
-      'Pack warm clothes, trekking shoes, medicines, sunscreen, and ID proofs. Include rain gear if visiting during monsoon.',
+      'Our packages typically include transportation, accommodation, meals (as specified), trip captain, and fun group activities. Inclusions vary by trip and are listed in each itinerary.',
   },
   {
-    question: 'How is the weather in Himachal?',
+    question: 'Where is the pickup and drop location for group trips?',
     answer:
-      'The weather ranges from pleasant in summers to snowy and freezing in winters, depending on altitude and season.',
+      'Most weekend trips have a Delhi-to-Delhi pickup and drop facility. Details are mentioned on each trip page.',
   },
   {
-    question: 'What are the popular dishes to try in Himachal?',
+    question: 'How can I get the full itinerary and packing list?',
     answer:
-      'Try dishes like Dham, Bhey, Chana Madra, Aktori, and Trout fish.',
+      'Each trip detail page includes the itinerary, inclusions, exclusions, and a list of things to pack.',
   },
   {
-    question: 'What is the local mode of transportation in Himachal Pradesh?',
+    question: 'What if I’ve never traveled in a group before?',
     answer:
-      'Local buses, shared taxis, private cabs, and auto-rickshaws are commonly used.',
+      'That’s totally okay! Many of our travelers are first-timers. Our trip captains ensure everyone feels included and has a great time.',
   },
   {
-    question: 'What makes Himachal Pradesh a popular tourist destination?',
+    question: 'Is the Jungle Safari in Jim Corbett included in the package?',
     answer:
-      'Its serene landscapes, adventure sports, spiritual spots, and colonial towns make it ideal for all types of travelers.',
+      'Yes, the jungle ride is usually included in the Jim Corbett itinerary. Refer to the trip details for exact coverage.',
   },
   {
-    question: 'Are there any spiritual destinations in Himachal Pradesh?',
+    question: 'How do I contact support quickly?',
     answer:
-      'Yes, visit places like Manikaran, Tabo Monastery, Bhimakali Temple, and Jwala Devi Temple.',
+      'You can message us directly on WhatsApp at +91 78388 00808 for instant support and guidance.',
   },
   {
-    question: 'What is unique about Tibetan Monasteries in Himachal?',
+    question: 'What’s your refund or cancellation policy?',
     answer:
-      'They offer vibrant culture, peaceful surroundings, prayer wheels, and ancient Buddhist teachings, especially in Dharamshala and Spiti.',
+      'Cancellations made well in advance are usually eligible for partial refunds depending on notice period. Reach out on WhatsApp for exact policy details.',
   },
 ]
+
 
 export default function FaqSection() {
   const [openItem, setOpenItem] = useState<string | null>(null)
