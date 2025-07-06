@@ -6,9 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 
 const rotatingWords = [
-    'Food & Culture',
-    'Diverse Landscape',
-    'New Friendships'
+    'Stories to Tell', 'Friendships for Life', 'Moments that Matter'
 ]
 
 const Hero = () => {
