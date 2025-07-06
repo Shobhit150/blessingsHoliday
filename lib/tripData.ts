@@ -95,7 +95,7 @@ export interface Trip {
       startDate: "2025-07-25",
       endDate: "2025-07-30",
       price: "₹4,999",
-      image: "/images/goa.jpg",
+      image: "/trips_image/sarika.webp",
       duration: "2 Days 1 Nights",
       pickup: "Delhi",
       category: "Jungle",

@@ -54,7 +54,7 @@ const Details = () => {
                                         alt={trip.title}
                                         width={200}
                                         height={200}
-                                        className="w-full h-[300px] rounded-t-lg object-contain"
+                                        className="w-full h-[300px] rounded-t-lg object-left"
                                     />
                                     <div className="mt-4">
                                         <h3 className="text-lg font-semibold">{trip.title}</h3>
