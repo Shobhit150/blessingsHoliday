@@ -8,10 +8,19 @@ import {
 } from 'react-icons/fa6'
 import Link from 'next/link'
 import { trips } from '@/lib/tripData'
-const destinations = trips.map(trip => ({
-  title: trip.title,
-  slug: trip.slug
-}))
+const seenTitles = new Set<string>()
+const destinations = trips
+  .filter(trip => {
+    if (seenTitles.has(trip.title)) return false
+    seenTitles.add(trip.title)
+    return true
+  })
+  .map(trip => ({
+    title: trip.title,
+    slug: trip.slug,
+    id: trip.id
+  }))
+
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white px-6 py-12 mt-10 pt-20">
@@ -44,7 +53,7 @@ const Footer = () => {
   <h3 className="text-lg font-semibold mb-4">Weekend Trips</h3>
   <ul className="space-y-2 text-sm text-gray-300">
     {destinations.map((dest) => (
-      <li key={dest.slug}>
+      <li key={dest.id}>
         <Link href={`/trips/${dest.slug}`} className="hover:underline">
           {dest.title}
         </Link>

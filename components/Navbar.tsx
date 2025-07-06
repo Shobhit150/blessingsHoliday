@@ -7,10 +7,19 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { FaChevronDown } from 'react-icons/fa6'
 
 import { trips } from '@/lib/tripData'
-const destinations = trips.map(trip => ({
-  title: trip.title,
-  slug: trip.slug
-}))
+const seenTitles = new Set<string>()
+const destinations = trips
+  .filter(trip => {
+    if (seenTitles.has(trip.title)) return false
+    seenTitles.add(trip.title)
+    return true
+  })
+  .map(trip => ({
+    title: trip.title,
+    slug: trip.slug,
+    id: trip.id
+  }))
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -61,7 +70,7 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: -10 }}
                 >
                   {destinations.map(dest => (
-                    <Link key={dest.title} href={`/trips/${dest.slug}`} className="block py-1 hover:text-blue-600">
+                    <Link key={dest.id} href={`/trips/${dest.slug}`} className="block py-1 hover:text-blue-600">
                       {dest.title}
                     </Link>
                   ))}
@@ -100,7 +109,7 @@ const Navbar = () => {
                   <div className="mt-2 font-semibold">Destinations</div>
                   {destinations.map(dest => (
                     <Link
-                      key={dest.title}
+                      key={dest.id}
                       href={`/trips/${dest.slug}`}
                       className="block mt-1 text-sm"
                       onClick={() => setIsOpen(false)}
