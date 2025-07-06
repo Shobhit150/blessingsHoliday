@@ -85,9 +85,9 @@ export interface Trip {
       ]
     },
     {
-      id: "goa-2025-07",
+      id: "sarika-2025-07",
       tag: "July 2025",
-      slug: "goa-beach-chill",
+      slug: "sarika-tiger-crocodile",
       title: "Sariska Tiger and crocodile",
       location: "Rajasthan",
       date: "Not decided",
