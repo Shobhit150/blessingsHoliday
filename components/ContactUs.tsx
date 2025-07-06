@@ -24,7 +24,7 @@ const ContactUs = () => {
         {/* Left */}
         <div className="md:w-1/2 flex flex-col items-center justify-center text-center">
           <Image
-            src="/images/question.png"
+            src="/images/question.webp"
             alt="Contact Us"
             width={200}
             height={200}
