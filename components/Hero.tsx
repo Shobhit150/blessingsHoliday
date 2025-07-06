@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="relative z-20 flex items-center justify-center h-full text-white text-4xl font-bold flex-col text-center">
                 <div className="text-4xl md:text-[65px] font-bold mb-6 flex flex-col justify-center w-full ">
                     <div>
-                        Book to Experience
+                        Discover New
                     </div>
 
                     <div className="relative h-[40px] md:h-[70px] overflow-hidden text-nowrap">
