@@ -32,15 +32,18 @@ const Hero = () => {
             <div>
                 {videos.map((src, idx) => (
                     <video
-                        key={idx}
-                        src={src}
                         autoPlay
                         loop
                         muted
                         playsInline
                         preload="auto"
                         className="w-full h-full object-cover absolute"
-                    />
+                    >
+                        <source src="/videos/output.webm" type="video/webm" />
+                        <source src="/videos/output.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+
                 ))}
             </div>
             <div className="absolute inset-0 bg-black/60 z-10" />
