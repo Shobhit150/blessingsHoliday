@@ -25,7 +25,7 @@ const RightSideBar = () => {
         rel="noopener noreferrer"
       >
         <Image
-          src="/icons/whatsapp.webp"
+          src="/icons/WhatsApp.webp"
           alt="WhatsApp"
           width={30}
           height={30}

@@ -15,32 +15,28 @@ const Details = () => {
     return (
         <div className="px-4 py-8 max-w-[1100px] m-auto -mt-[46px] md:-mt-[55px] ">
             {/* Month Selector */}
-            <motion.div
-                className=" relative z-30 flex overflow-x-auto no-scrollbar px-4 sm:justify-center"
-                drag="x"
-                dragConstraints={{ left: -300, right: 0 }}
-            >
+            <div className="relative z-30 flex overflow-x-auto no-scrollbar px-4 sm:justify-center">
                 {months.map((month) => (
                     <button
-                    key={month}
-                    onClick={() => setSelectedMonth(month)}
-                    className={`
-                      px-2 py-2 md:px-6 md:py-4 text-sm border whitespace-nowrap transition-colors duration-200
-                      ${selectedMonth === month
-                        ? 'bg-orange-600 text-white border-orange-500'
-                        : 'bg-white text-black border-gray-300 hover:bg-gray-100'}
-                    `}
-                  >
-                    {month}
-                  </button>
-                  
+                        key={month}
+                        onClick={() => setSelectedMonth(month)}
+                        className={`
+        px-2 py-2 md:px-6 md:py-4 text-sm border whitespace-nowrap transition-colors duration-200
+        ${selectedMonth === month
+                                ? 'bg-orange-600 text-white border-orange-500'
+                                : 'bg-white text-black border-gray-300 hover:bg-gray-100'}
+      `}
+                    >
+                        {month}
+                    </button>
                 ))}
-            </motion.div>
+            </div>
+
             <h2 className="text-2xl font-bold mb-4 text-center mt-10">
                 Upcoming Group Trips For You 🥳
             </h2>
 
-            
+
 
             {/* Trip Cards */}
             <div className="py-2 px-2">
@@ -73,7 +69,7 @@ const Details = () => {
                                             </p>
 
                                         </div>
-                                        
+
 
                                         <Link
                                             href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip in ${trip.date}.`}
