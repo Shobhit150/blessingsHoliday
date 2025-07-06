@@ -246,7 +246,7 @@ export const trips: Trip[] = [
     startDate: "2025-08-18",
     endDate: "2025-08-20",
     price: "₹-,---",
-    image: ["/trips_image/jim2.webp", "/trips_image/jim3.webp", "/trips_image/jim4.webp"],
+    image: ["/trips_image/manali2.webp", "/trips_image/manali3.webp", "/trips_image/manali4.webp"],
     duration: "2 Nights 3 Days",
     pickup: "Delhi-Delhi",
     category: "Weekend Trips",
