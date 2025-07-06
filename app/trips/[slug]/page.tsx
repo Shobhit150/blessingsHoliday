@@ -9,7 +9,7 @@ import {
   FaUtensils, FaBus, FaFire, FaWhatsapp, FaFileDownload
 } from 'react-icons/fa'
 
-const whatsappNumber = '919140772033'
+const whatsappNumber = '917838800808'
 
 const TripDetail = () => {
   const params = useParams()

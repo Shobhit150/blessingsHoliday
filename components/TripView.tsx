@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { trips } from '@/lib/tripData'
 
 const months = ['July 2025', 'August 2025', 'September 2025']
-const whatsappNumber = '919140772033'
+const whatsappNumber = '917838800808'
 
 const Details = () => {
     const [selectedMonth, setSelectedMonth] = useState('July 2025')

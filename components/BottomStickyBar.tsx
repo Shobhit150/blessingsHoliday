@@ -17,7 +17,7 @@ const BottomStickyBar = () => {
       <div className="flex justify-between items-center text-sm font-medium text-black">
         {/* Call */}
         <a
-          href="tel:+919140772033"
+          href="tel:+917838800808"
           className="w-full flex items-center justify-center gap-2 py-3 hover:bg-gray-100 transition"
           aria-label="Call Us"
         >
@@ -29,7 +29,7 @@ const BottomStickyBar = () => {
 
         {/* Email */}
         <a
-          href="mailto:tripplanner@example.com"
+          href="mailto:info@blessingsholiday.com"
           className="w-full flex items-center justify-center gap-2 py-3 hover:bg-gray-100 transition"
           aria-label="Email Us"
         >

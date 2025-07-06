@@ -119,7 +119,7 @@ const TripSteps = () => {
       <div className="mt-12 text-center text-sm text-gray-800">
         <p className="mb-2 font-medium">Call us or drop a Hi on WhatsApp at</p>
         <div className="flex justify-center gap-4 text-lg items-center text-blue-600 font-semibold">
-          <FaPhoneAlt /> +91 9140772033
+          <FaPhoneAlt /> +91 7838800808
           <span className="mx-2">|</span>
           <FaWhatsapp className="text-green-600" /> WhatsApp
         </div>

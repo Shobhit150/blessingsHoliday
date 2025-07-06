@@ -56,7 +56,7 @@ const ContactUs = () => {
                 `Hi, I'm ${name}.\nPhone: ${phone}\nEmail: ${email}\nMessage: ${message || 'N/A'}`
               )
 
-              const whatsappNumber = '919140772033'
+              const whatsappNumber = '917838800808'
               window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank')
             }}
           >

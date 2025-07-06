@@ -20,7 +20,7 @@ const RightSideBar = () => {
       </Link>
 
       <Link
-        href="https://wa.me/919140772033"
+        href="https://wa.me/917838800808"
         target="_blank"
         rel="noopener noreferrer"
       >

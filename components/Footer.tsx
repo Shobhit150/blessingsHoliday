@@ -55,7 +55,7 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-2">
                             <FaWhatsapp />
-                            <a href="https://wa.me/919140772033" target="_blank" rel="noopener noreferrer" className="hover:underline">
+                            <a href="https://wa.me/917838800808" target="_blank" rel="noopener noreferrer" className="hover:underline">
                                 WhatsApp
                             </a>
                         </li>
@@ -117,8 +117,8 @@ const Footer = () => {
                         Noida, Uttar Pradesh - 201301
                     </p>
                     <p className="text-sm text-gray-300 mt-2">
-                        +91 9140772033 <br />
-                        contact@go4explore.com
+                        +91 7838800808 <br />
+                        info@blessingsholiday.com
                     </p>
                 </div>
             </div>
