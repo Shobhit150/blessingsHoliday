@@ -58,7 +58,7 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: -10 }}
                 >
                   {destinations.map(dest => (
-                    <Link key={dest.label} href={`/trip/${dest.slug}`} className="block py-1 hover:text-blue-600">
+                    <Link key={dest.label} href={`/trips/${dest.slug}`} className="block py-1 hover:text-blue-600">
                       {dest.label}
                     </Link>
                   ))}
@@ -98,7 +98,7 @@ const Navbar = () => {
                   {destinations.map(dest => (
                     <Link
                       key={dest.label}
-                      href={`/trip/${dest.slug}`}
+                      href={`/trips/${dest.slug}`}
                       className="block mt-1 text-sm"
                       onClick={() => setIsOpen(false)}
                     >
