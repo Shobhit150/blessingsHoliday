@@ -22,21 +22,21 @@ const AboutUs = () => {
       </section>
 
       {/* Our Mission */}
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className="space-y-4">
+      <section className="flex justify-center gap-10 items-center flex-col">
+        
           <h2 className="text-2xl md:text-3xl font-bold text-orange-600">✨ Our Mission</h2>
           <p className="text-gray-700 leading-6">
             We're not a typical travel agency. We're a community of explorers crafting experiences that blend adventure, culture, and new friendships.
             Whether it's camping under the stars in Himachal, discovering hidden lakes in Uttarakhand, or dancing on beaches in Goa — every trip we plan is designed to give you stories worth remembering.
           </p>
-        </div>
-        <Image
+        
+        {/* <Image
           src="/about_us/team.webp"
           alt="Our Team"
           width={600}
           height={400}
           className="rounded-xl object-cover shadow-xl"
-        />
+        /> */}
       </section>
 
       {/* Why Choose Us */}
