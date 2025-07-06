@@ -15,7 +15,7 @@ const Details = () => {
     return (
         <div className="px-4 py-8 max-w-[1100px] m-auto -mt-[46px] md:-mt-[55px] ">
             {/* Month Selector */}
-            <div className="relative z-30 flex overflow-x-auto no-scrollbar px-4 sm:justify-center">
+            <div className="relative z-30 flex overflow-x-auto no-scrollbar px-4 justify-center">
                 {months.map((month) => (
                     <button
                         key={month}
