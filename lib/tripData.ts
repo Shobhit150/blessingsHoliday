@@ -59,16 +59,15 @@ export interface Trip {
       ],
       exclusions: [
         "Extra meals",
-        "Insurance",
-        "Entry fees",
+        
         "Snow-chained vehicle",
         "Unforeseen weather/road issues",
         "5% GST"
       ],
       batches: [
-        "11 Jul 2025 - 15 Jul 2025",
-        "18 Jul 2025 - 22 Jul 2025",
-        "25 Jul 2025 - 29 Jul 2025"
+       
+        "18 Jul 2025 - 20 Jul 2025",
+        
       ],
       priceSummary: {
         quad: "₹7,500",

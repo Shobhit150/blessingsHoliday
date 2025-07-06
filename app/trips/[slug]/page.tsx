@@ -111,7 +111,7 @@ const TripDetail = () => {
       {/* Price Summary */}
       <Section title="💰 Price Summary (per person)">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
-          <PriceBox label="Price" value={trip.price} />
+          <PriceBox label="Double/Triple Sharing" value={trip.price} />
           
         </div>
       </Section>
