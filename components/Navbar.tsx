@@ -18,10 +18,10 @@ const Navbar = () => {
   ]
 
   const destinations = [
-    { label: 'Corbett & Nainital', href: '#' },
-    { label: 'Sariska Tiger and crocodile', href: '#' },
-
+    { label: 'Corbett & Nainital', slug: 'corbett-nainital' },
+    { label: 'Sariska Tiger and Crocodile', slug: 'sariska-tiger-crocodile' },
   ]
+
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
@@ -57,10 +57,11 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: -10 }}
                 >
                   {destinations.map(dest => (
-                    <Link key={dest.label} href={dest.href} className="block py-1 hover:text-blue-600">
+                    <Link key={dest.label} href={`/trip/${dest.slug}`} className="block py-1 hover:text-blue-600">
                       {dest.label}
                     </Link>
                   ))}
+
                 </motion.div>
               )}
             </AnimatePresence>
@@ -94,10 +95,16 @@ const Navbar = () => {
                 <div className="w-full px-8">
                   <div className="mt-2 font-semibold">Destinations</div>
                   {destinations.map(dest => (
-                    <Link key={dest.label} href={dest.href} className="block mt-1 text-sm" onClick={() => setIsOpen(false)}>
+                    <Link
+                      key={dest.label}
+                      href={`/trip/${dest.slug}`}
+                      className="block mt-1 text-sm"
+                      onClick={() => setIsOpen(false)}
+                    >
                       {dest.label}
                     </Link>
                   ))}
+
                 </div>
               </div>
             </motion.div>
