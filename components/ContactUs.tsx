@@ -86,7 +86,7 @@ const ContactUs = () => {
             <div className="w-full flex justify-center">
               <button
                 type="submit"
-                className="min-w-[250px] bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+                className="min-w-[250px] bg-[#f7ce51] text-white py-2 rounded-lg hover:bg-[#ffe69a] transition"
               >
                 Request a callback
               </button>
