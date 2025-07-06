@@ -7,7 +7,12 @@ const whatsappNumber = '917838800808'
 const toEmail = 'info@blessingholiday.com'
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  })
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -16,13 +21,24 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const { name, email, message } = formData
+    const { name, email, phone, message } = formData
 
-    const gmailLink = `https://mail.google.com/mail/?view=cm&to=${toEmail}&su=${encodeURIComponent(
-      'Trip Enquiry from ' + name
-    )}&body=${encodeURIComponent(message + '\n\nReply to: ' + email)}`
+    const subject = `Trip Enquiry from ${name}`
+    const body = `${message}\n\nPhone: ${phone}\nReply to: ${email}`
 
-    window.open(gmailLink, '_blank')
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+
+    if (isMobile) {
+      // Opens Gmail app on mobile (via mailto link)
+      const mailto = `mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+      window.location.href = mailto
+    } else {
+      // Opens Gmail in new tab on desktop
+      const gmailLink = `https://mail.google.com/mail/?view=cm&to=${toEmail}&su=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`
+      window.open(gmailLink, '_blank')
+    }
   }
 
   return (
@@ -58,6 +74,15 @@ const ContactPage = () => {
           required
           className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
         />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Your Phone Number"
+          value={formData.phone}
+          onChange={handleChange}
+          required
+          className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
         <textarea
           name="message"
           placeholder="Your Message"
@@ -71,7 +96,7 @@ const ContactPage = () => {
           type="submit"
           className="bg-orange-600 text-white py-2 px-6 rounded-lg font-semibold hover:bg-orange-700 transition"
         >
-          Open in Gmail
+          Contact via Gmail
         </button>
       </form>
 
