@@ -1,3 +1,4 @@
+// app/[trips]/[slug]/page.tsx
 'use client'
 import { trips } from '@/lib/tripData'
 import { notFound } from 'next/navigation'
