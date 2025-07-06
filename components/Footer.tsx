@@ -7,7 +7,11 @@ import {
   FaXTwitter,
 } from 'react-icons/fa6'
 import Link from 'next/link'
-
+import { trips } from '@/lib/tripData'
+const destinations = trips.map(trip => ({
+  title: trip.title,
+  slug: trip.slug
+}))
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white px-6 py-12 mt-10 pt-20">
@@ -37,20 +41,17 @@ const Footer = () => {
 
         {/* Popular Weekend Trips */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Weekend Trips</h3>
-          <ul className="space-y-2 text-sm text-gray-300">
-            <li>
-              <Link href="/trips/corbett-nainital" className="hover:underline">
-                Jim Corbett & Nainital
-              </Link>
-            </li>
-            <li>
-              <Link href="/trips/sarika-tiger-crocodile" className="hover:underline">
-                Sariska Tiger and Crocodile
-              </Link>
-            </li>
-          </ul>
-        </div>
+  <h3 className="text-lg font-semibold mb-4">Weekend Trips</h3>
+  <ul className="space-y-2 text-sm text-gray-300">
+    {destinations.map((dest) => (
+      <li key={dest.slug}>
+        <Link href={`/trips/${dest.slug}`} className="hover:underline">
+          {dest.title}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
         {/* Social Links */}
         <div>

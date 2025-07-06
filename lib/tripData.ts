@@ -89,7 +89,7 @@ export const trips: Trip[] = [
     startDate: "not Decided",
     endDate: "not Decided",
     price: "₹4,999",
-    image: ["/trips_image/sarika1.webp","/trips_image/sarika2.webp","/trips_image/sarika3.webp","/trips_image/sarika4.webp"],
+    image: ["/trips_image/sarika2.webp","/trips_image/sarika1.webp","/trips_image/sarika3.webp","/trips_image/sarika4.webp"],
     duration: "1 Night 2 Days",
     pickup: "Delhi",
     category: "Jungle",

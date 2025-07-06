@@ -77,7 +77,7 @@ const Details = () => {
                     href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip in ${trip.date}.`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block border-orange-600 border-2 mt-4 px-4 py-2 bg-orange-600 text-white rounded-md text-sm hover:bg-orange-500 transition"
+                    className="inline-block border-[#f7ce51] border-2 mt-4 px-4 py-2 bg-[#f7ce51] text-white rounded-md text-sm hover:bg-orange-500 transition"
                   >
                     Book on WhatsApp
                   </Link>
