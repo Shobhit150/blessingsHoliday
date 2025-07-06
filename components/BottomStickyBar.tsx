@@ -34,7 +34,7 @@ const BottomStickyBar = () => {
           aria-label="Chat on WhatsApp"
         >
           <FaWhatsapp className="text-green-600" />
-          WhatsApp
+          Email
         </a>
 
         <div className="w-[1px] bg-gray-300 h-6" />

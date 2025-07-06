@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { trips } from '@/lib/tripData'
 
-const months = ['July 2025', 'August 2025', 'September 2025', 'October 2025']
+const months = ['July 2025', 'August 2025', 'September 2025']
 const whatsappNumber = '919140772033'
 
 const Details = () => {
