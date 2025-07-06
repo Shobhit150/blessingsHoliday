@@ -4,7 +4,7 @@ import SearchOptions from './SearchOptions'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const videos = [
-    "/videos/IMG_2500.mp4"
+    "/videos/output.webm"
 ]
 
 const rotatingWords = [
@@ -14,10 +14,10 @@ const rotatingWords = [
 ]
 
 const Hero = () => {
-   
+
     const [index, setIndex] = useState(0)
 
-    
+
     useEffect(() => {
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % rotatingWords.length)
@@ -26,26 +26,24 @@ const Hero = () => {
         return () => clearInterval(interval)
     }, [])
 
-    
+
     return (
-        <div className='w-full h-[60vh] relative'>
+        <div className='w-full h-[60vh] md:h-[75vh] relative'>
             <div>
                 {videos.map((src, idx) => (
                     <video
                         key={idx}
-                        
                         src={src}
                         autoPlay
                         loop
                         muted
                         playsInline
                         preload="auto"
-                        disableRemotePlayback
                         className="w-full h-full object-cover absolute"
                     />
                 ))}
             </div>
-            <div className="absolute inset-0 bg-black/40 z-10" />
+            <div className="absolute inset-0 bg-black/60 z-10" />
             <div className="relative z-20 flex items-center justify-center h-full text-white text-4xl font-bold flex-col text-center">
                 <div className="text-4xl md:text-[65px] font-bold mb-6 flex flex-col justify-center w-full ">
                     <div>

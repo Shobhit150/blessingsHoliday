@@ -44,21 +44,19 @@ export default function SearchOptions() {
         <div>
             <Combobox value={selected} onChange={handleSelect}>
                 <div className="relative w-full flex flex-col items-start text-xl">
-                    <div className='text-sm border border-white px-4 py-2 rounded-t-[10px] text-black bg-white'>
-                        Trip Package
-                    </div>
-                    <div className='relative flex text-[10px] md:text-[16px] w-full rounded-b-[10px] md:rounded-b-[20px] rounded-r-[10px] md:rounded-r-[20px] bg-white text-black px-4 py-4 text-center'>
-                        <div className='flex w-full items-center'>
-                            <FaLocationDot size={20} />
+                    
+                    <div className='relative flex items-center justify-center text-[10px] md:text-[16px] w-full   text-black px-4 py-4 text-center'>
+                        <div className='flex w-full items-center justify-center '>
+                            
                             <ComboboxInput
-                                className="w-full outline-none px-2 py-2"
+                                className="w-full outline-none px-4 py-4 bg-white/40 placeholder:text-white"
                                 onChange={(event) => setQuery(event.target.value)}
                                 placeholder="Pick Best Suitable Package"
                                 displayValue={() => selected}
                             />
                         </div>
-                        <div>
-                            <IoSearch size={32} />
+                        <div className=' px-6 py-4 bg-orange-600 text-white'>
+                            SEARCH
                         </div>
                     </div>
 

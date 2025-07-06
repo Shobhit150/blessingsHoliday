@@ -86,68 +86,6 @@ export interface Trip {
       ]
     },
     {
-      id: "leh-ladakh-2025-08",
-      tag: "August 2025",
-      slug: "leh-ladakh-roadtrip",
-      title: "Leh-Ladakh Roadtrip",
-      location: "Ladakh",
-      date: "15 Aug 2025 - 24 Aug 2025",
-      startDate: "2025-08-15",
-      endDate: "2025-08-24",
-      price: "₹29,999",
-      image: "/images/leh-ladakh.jpg",
-      duration: "10 Days 9 Nights",
-      pickup: "Manali-Leh",
-      category: "Adventure",
-      tags: ["Biking", "Mountains", "Adventure", "Photography", "Camping"],
-      overview:
-        "Experience the thrill of high-altitude passes and serene lakes in Ladakh on this unforgettable road trip.",
-      itinerary: [
-        "Day 1: Manali Arrival & Orientation",
-        "Day 2: Drive to Jispa",
-        "Day 3: Jispa to Sarchu",
-        "Day 4: Sarchu to Leh",
-        "Day 5: Leh Local Sightseeing",
-        "Day 6: Leh to Nubra Valley",
-        "Day 7: Nubra to Pangong Lake",
-        "Day 8: Pangong to Leh",
-        "Day 9: Leh to Manali",
-        "Day 10: Departure"
-      ],
-      inclusions: [
-        "Bike + Fuel",
-        "Accommodation",
-        "Meals (Breakfast & Dinner)",
-        "Mechanical Support",
-        "Permits",
-        "Trip Leader"
-      ],
-      exclusions: [
-        "Airfare",
-        "Lunch",
-        "Riding Gear",
-        "Insurance",
-        "Personal Expenses"
-      ],
-      batches: [
-        "15 Aug 2025 - 24 Aug 2025",
-        "22 Aug 2025 - 31 Aug 2025"
-      ],
-      priceSummary: {
-        quad: "₹27,999",
-        triple: "₹28,999",
-        double: "₹29,999"
-      },
-      thingsToPack: [
-        "Riding Gear",
-        "Thermals & Woolens",
-        "Sunscreen & Lip balm",
-        "Hydration Pack",
-        "Valid ID Proof",
-        "Portable Oxygen Can"
-      ]
-    },
-    {
       id: "goa-2025-07",
       tag: "July 2025",
       slug: "goa-beach-chill",
@@ -156,7 +94,7 @@ export interface Trip {
       date: "Not decided",
       startDate: "2025-07-25",
       endDate: "2025-07-30",
-      price: "₹5,499",
+      price: "₹4,999",
       image: "/images/goa.jpg",
       duration: "2 Days 1 Nights",
       pickup: "Delhi",

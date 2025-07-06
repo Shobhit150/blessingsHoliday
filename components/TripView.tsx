@@ -13,30 +13,34 @@ const Details = () => {
     const filteredTrips = trips.filter(trip => trip.tag === selectedMonth)
 
     return (
-        <div className="px-4 py-8 max-w-[1150px] m-auto">
-            <h2 className="text-2xl font-bold mb-4 text-center">
-                Upcoming Group Trips For You 🥳
-            </h2>
-
+        <div className="px-4 py-8 max-w-[1100px] m-auto -mt-[52px] ">
             {/* Month Selector */}
             <motion.div
-                className="flex space-x-3 overflow-x-auto pb-2 no-scrollbar px-2"
+                className=" relative z-30 flex overflow-x-auto no-scrollbar justify-center"
                 drag="x"
                 dragConstraints={{ left: -300, right: 0 }}
             >
                 {months.map((month) => (
                     <button
-                        key={month}
-                        onClick={() => setSelectedMonth(month)}
-                        className={`px-4 py-2 border rounded-full text-sm whitespace-nowrap transition ${selectedMonth === month
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-white border-gray-300 text-gray-700'
-                            }`}
-                    >
-                        {month}
-                    </button>
+                    key={month}
+                    onClick={() => setSelectedMonth(month)}
+                    className={`
+                      px-4 py-2 text-sm border whitespace-nowrap transition-colors duration-200
+                      ${selectedMonth === month
+                        ? 'bg-orange-600 text-white border-orange-500'
+                        : 'bg-white text-black border-gray-300 hover:bg-gray-100'}
+                    `}
+                  >
+                    {month}
+                  </button>
+                  
                 ))}
             </motion.div>
+            <h2 className="text-2xl font-bold mb-4 text-center">
+                Upcoming Group Trips For You 🥳
+            </h2>
+
+            
 
             {/* Trip Cards */}
             <div className="py-2 px-2">
