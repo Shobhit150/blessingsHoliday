@@ -79,7 +79,7 @@ export const trips: Trip[] = [
     id: "sarika-2025-07",
     tag: "July 2025",
     slug: "sarika-tiger-crocodile",
-    title: "Sariska Tiger & Crocodile Safari",
+    title: "Sariska Tiger & Crocodile sighting",
     disclosed: false,
     location: "Rajasthan",
     date: "Not decided",
