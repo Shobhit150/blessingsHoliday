@@ -16,6 +16,7 @@ const Navbar = () => {
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' }
   ]
+  
 
   const destinations = [
     { label: 'Corbett & Nainital', slug: 'corbett-nainital' },
