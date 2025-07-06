@@ -27,8 +27,8 @@ const RightSideBar = () => {
         <Image
           src="/icons/WhatsApp.webp"
           alt="WhatsApp"
-          width={30}
-          height={30}
+          width={35}
+          height={35}
           className="hover:scale-110 transition"
         />
       </Link>
