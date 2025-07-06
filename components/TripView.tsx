@@ -23,7 +23,7 @@ const Details = () => {
             className={`
               px-2 py-2 md:px-6 md:py-4 text-sm border whitespace-nowrap transition-colors duration-200
               ${selectedMonth === month
-                ? 'bg-orange-600 text-white border-orange-500'
+                ? 'bg-[#f7ce51] text-white border-[#f4d67d]'
                 : 'bg-white text-black border-gray-300 hover:bg-gray-100'}
             `}
           >
