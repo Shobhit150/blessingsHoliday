@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const RightSideBar = () => {
   return (
-    <div className=" fixed right-0 bottom-[100px] w-[60px] bg-white shadow-lg border-l z-40 overflow-y-auto p-2 flex flex-col items-center gap-6">
+    <div className=" fixed right-0 bottom-[100px] w-[60px] z-40 overflow-y-auto p-2 flex flex-col items-center gap-6">
       <Link
         href="https://www.instagram.com/YOUR_USERNAME"
         target="_blank"

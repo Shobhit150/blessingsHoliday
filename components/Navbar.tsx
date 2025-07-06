@@ -18,11 +18,9 @@ const Navbar = () => {
   ]
 
   const destinations = [
-    { label: 'Himachal', href: '#' },
-    { label: 'Ladakh', href: '#' },
-    { label: 'Meghalaya', href: '#' },
-    { label: 'Vietnam', href: '#' },
-    { label: 'Thailand', href: '#' },
+    { label: 'Corbett & Nainital', href: '#' },
+    { label: 'Sariska Tiger and crocodile', href: '#' },
+
   ]
 
   return (

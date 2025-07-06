@@ -11,10 +11,10 @@ const ContactUs = () => {
       {/* ✅ Background Image */}
       <div className="absolute inset-0 z-0 opacity-80">
         <Image
-          src="/images/contact_us_flight.webp"
+          src="/images/bg_contact.webp"
           alt="Background"
           fill
-          className="object-cover"
+          className=" object-left md:object-obtain "
         />
       </div>
 
