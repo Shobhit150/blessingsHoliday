@@ -11,7 +11,7 @@ const Hero2 = () => {
             <div className='relative z-10 flex flex-row h-full justify-center items-center max-w-[1150px] mx-auto px-4 '>
                 <div className='w-1/2 flex flex-col space-y-4'>
                     <h3 className='text-7xl font-extrabold'>
-                        Discover the World's Hidden Wonders
+                        Discover the World&apos;s Hidden Wonders
                     </h3>
                     <p>
                         Data about trip
