@@ -31,7 +31,7 @@ export interface Trip {
       id: "corbett-nainital-2025-07",
       tag: "July 2025",
       slug: "corbett-nainital",
-      title: "Corbett & Nainital",
+      title: "Jim Corbett & Nainital",
       location: "Uttarakhand",
       date: "18 Jul 2025 - 20 Jul 2025",
       startDate: "2025-07-18",

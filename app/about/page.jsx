@@ -3,7 +3,6 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
-import { trips } from '@/lib/tripData'
 
 const whatsappNumber = '917838800808'
 
@@ -16,30 +15,58 @@ const AboutUs = () => {
           Who We Are
         </h1>
         <p className="max-w-2xl mx-auto text-lg text-gray-600 leading-7">
-          At <span className="font-semibold text-orange-600">Blessings Holiday</span>, we believe travel isn't just about places — it's about people, moments, and memories.
-          We curate unforgettable group trips for youth, explorers, and culture lovers who want more than just sightseeing.
+          At <span className="font-semibold text-orange-600">Blessings Holiday</span>, we believe travel isn’t just about places — it’s about people, moments, and memories.
+          We curate unforgettable group trips for youth, explorers, and culture lovers who crave experiences over itineraries.
         </p>
       </section>
 
-      {/* Our Mission */}
-      <section className="flex justify-center gap-10 items-center flex-col">
-        
-          <h2 className="text-2xl md:text-3xl font-bold text-orange-600">✨ Our Mission</h2>
-          <p className="text-gray-700 leading-6">
-            We're not a typical travel agency. We're a community of explorers crafting experiences that blend adventure, culture, and new friendships.
-            Whether it's camping under the stars in Himachal, discovering hidden lakes in Uttarakhand, or dancing on beaches in Goa — every trip we plan is designed to give you stories worth remembering.
-          </p>
-        
-        {/* <Image
-          src="/about_us/team.webp"
-          alt="Our Team"
-          width={600}
-          height={400}
-          className="rounded-xl object-cover shadow-xl"
-        /> */}
+      {/* Mission Section */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-orange-600 text-center">✨ Our Mission</h2>
+        <p className="text-gray-700 leading-7 text-center max-w-3xl mx-auto">
+          Ever had a trip waste your time and money? We did too! That’s why we built something better — a travel company by travelers, for travelers. We're here to create journeys worth remembering, not just checking off tourist spots.
+        </p>
+        <ul className="text-gray-700 leading-7 list-disc list-inside max-w-3xl mx-auto space-y-2">
+          <li>✅ Discover hidden gems guidebooks miss</li>
+          <li>✅ Share authentic local flavors — not just Instagram-famous dishes</li>
+          <li>✅ Handpick unique stays that feel like home, but surprise you every day</li>
+          <li>✅ Handle all logistics, so you focus on making memories</li>
+        </ul>
       </section>
 
-      {/* Why Choose Us */}
+      {/* What Makes Us Different */}
+      <section className="space-y-6">
+        <h2 className="text-3xl font-bold text-orange-600 text-center">🍲 What Makes Us Different</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm font-medium">
+          {[
+            { emoji: '🍛', text: 'Food with a story — from secret kitchens to street legends' },
+            { emoji: '🏡', text: 'Stays with soul — heritage homes & eco-resorts' },
+            { emoji: '🛤️', text: 'Paths less traveled — fresh and original destinations' },
+            { emoji: '🧳', text: 'All-in-one care — you relax, we handle the chaos' },
+          ].map(({ emoji, text }, i) => (
+            <div key={i} className="p-4 bg-orange-50 rounded-lg shadow text-center space-y-2">
+              <div className="text-3xl">{emoji}</div>
+              <div className="text-gray-700">{text}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Our Promise */}
+      <section className="text-center space-y-6 max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold text-orange-600">🗺 Our Promise</h2>
+        <p className="text-gray-700">
+          Your next trip won't just be a vacation. It will be:
+        </p>
+        <ul className="text-gray-700 leading-7 list-disc list-inside space-y-2">
+          <li>✅ Thoughtfully planned, not rushed</li>
+          <li>✅ Seamless from start to finish</li>
+          <li>✅ Rich in authentic food, culture, and local connection</li>
+          <li>✅ A story worth telling — and retelling</li>
+        </ul>
+      </section>
+
+      {/* Why Travel With Us */}
       <section className="text-center space-y-6">
         <h2 className="text-3xl font-bold text-orange-600">Why Travel With Us?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm font-medium">
@@ -57,57 +84,13 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Featured Trips */}
-      <section>
-        <h2 className="text-3xl font-bold text-center mb-6 text-orange-600">🚀 Our Top Adventures</h2>
-        <div className="flex flex-wrap justify-center gap-6">
-          {trips.slice(0, 3).map((trip, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2 }}
-              className="border shadow-xl shadow-gray-300 rounded-[14px] p-3 min-w-[340px] md:min-w-[400px] max-w-[400px] bg-white overflow-hidden"
-            >
-              <Image
-                src={trip.image}
-                alt={trip.title}
-                width={400}
-                height={300}
-                className="w-full h-[300px] rounded-t-lg object-cover"
-              />
-              <div className="mt-4 space-y-1">
-                <h3 className="text-lg font-semibold">{trip.title}</h3>
-                <p className="text-sm text-gray-600">{trip.location}</p>
-                <p className="text-sm text-gray-600">{trip.date}</p>
-
-                <div className="border rounded-lg border-orange-600 flex flex-col mt-2">
-                  <p className="text-[10px] bg-[rgb(253,244,244)] p-2 rounded-t-lg">
-                    STARTS FROM
-                  </p>
-                  <p className="text-emerald-600 font-bold p-2">
-                    {trip.price}
-                  </p>
-                </div>
-
-                <Link
-                  href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip on ${trip.date}.`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block border-orange-600 border-2 mt-4 px-4 py-2 bg-orange-600 text-white rounded-md text-sm hover:bg-orange-500 transition"
-                >
-                  Book on WhatsApp
-                </Link>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* Footer CTA */}
       <section className="text-center mt-12 space-y-4">
-        <h3 className="text-xl font-semibold">Still thinking?</h3>
-        <p className="text-gray-600">Drop us a message and we'll help you find your perfect trip.</p>
+        <h3 className="text-xl font-semibold">✨ Ready to see the world differently?</h3>
+        <p className="text-gray-600">
+          Let’s make your next trip unforgettable — not because it was expensive, but because it felt real.
+        </p>
+        <p className="text-gray-600 font-medium">📍 Hidden places. 🥘 Honest food. ❤️ Memories that matter.</p>
         <Link
           href={`https://wa.me/${whatsappNumber}?text=Hi, I'm looking to plan a group trip.`}
           className="inline-block px-6 py-3 bg-green-600 text-white rounded-full font-semibold hover:bg-green-700 transition"
