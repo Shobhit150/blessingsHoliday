@@ -118,8 +118,8 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
           <p className="text-sm text-gray-300">
-            11, <br />
-            Rani Jhansi road, New Delhi- 110055
+            11, Rani Jhansi road,  <br />
+            New Delhi- 110055
           </p>
           <p className="text-sm text-gray-300 mt-2">
             📞 +91 78388 00808<br />
