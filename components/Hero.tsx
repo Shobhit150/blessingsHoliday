@@ -3,9 +3,7 @@ import React, { useEffect, useState } from 'react'
 import SearchOptions from './SearchOptions'
 import { AnimatePresence, motion } from 'framer-motion'
 
-const videos = [
-    "/videos/output.webm"
-]
+
 
 const rotatingWords = [
     'Food & Culture',
@@ -30,24 +28,18 @@ const Hero = () => {
     return (
         <div className='w-full h-[60vh] md:h-[75vh] relative'>
             <div>
-                {videos.map((src, idx) => (
-
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="auto"
-                        className="w-full h-full object-cover absolute"
-                        key={idx}
-                        src={src}
-                    >
-                        <source src="/videos/output.webm" type="video/webm" />
-                        <source src="/videos/output.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-
-                ))}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover absolute"
+                >
+                    <source src="/videos/output.mp4" type="video/mp4" />
+                    <source src="/videos/output.webm" type="video/webm" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
             <div className="absolute inset-0 bg-black/60 z-10" />
             <div className="relative z-20 flex items-center justify-center h-full text-white text-4xl font-bold flex-col text-center">
