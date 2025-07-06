@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaXTwitter,
 } from 'react-icons/fa6'
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -16,11 +17,21 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Company</h3>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Career With Us</li>
-            <li>Our Blogs</li>
-            <li>Forums</li>
+            <li>
+              <Link href="/about" className="hover:underline">
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:underline">
+                Contact Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/packages" className="hover:underline">
+                Packages
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -30,10 +41,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm text-gray-300">
             <li>Jim Corbett & Nainital</li>
             <li>Sariska Tiger and Crocodile</li>
-            <li>Jibhi & Tirthan Valley</li>
-            <li>Kasol Kheerganga</li>
-            <li>Mcleodganj Triund</li>
-            <li>Manali Sissu</li>
+            
           </ul>
         </div>
 
@@ -52,7 +60,7 @@ const Footer = () => {
                 Instagram
               </a>
             </li>
-            <li className="flex items-center gap-2">
+            {/* <li className="flex items-center gap-2">
               <FaFacebookF />
               <a
                 href="https://facebook.com/blessingsholiday"
@@ -62,7 +70,7 @@ const Footer = () => {
               >
                 Facebook
               </a>
-            </li>
+            </li> */}
             <li className="flex items-center gap-2">
               <FaWhatsapp />
               <a
@@ -74,7 +82,7 @@ const Footer = () => {
                 WhatsApp
               </a>
             </li>
-            <li className="flex items-center gap-2">
+            {/* <li className="flex items-center gap-2">
               <FaYoutube />
               <a
                 href="https://youtube.com/@blessingsholiday"
@@ -84,8 +92,8 @@ const Footer = () => {
               >
                 YouTube
               </a>
-            </li>
-            <li className="flex items-center gap-2">
+            </li> */}
+            {/* <li className="flex items-center gap-2">
               <FaXTwitter />
               <a
                 href="https://twitter.com/blessingsholiday"
@@ -95,7 +103,7 @@ const Footer = () => {
               >
                 Twitter
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
