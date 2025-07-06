@@ -41,32 +41,41 @@ const Details = () => {
             {/* Trip Cards */}
             <div className="py-2 px-2">
                 <div className="overflow-x-auto md:overflow-visible [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
-                    <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-max md:w-full">
+                    <div className="m-4 flex md:grid md:grid-cols-2 lg:grid-cols-2 gap-4 md:gap-6 w-max md:w-full">
 
                         {filteredTrips.length > 0 ? (
                             filteredTrips.map((trip, index) => (
                                 <motion.div
                                     key={index}
-                                    className="min-w-[340px] md:min-w-[360px] max-w-xs bg-white overflow-hidden flex-shrink-0 md:m-auto"
-                                    
+                                    className=" border shadow-xl shadow-gray-300 rounded-[14px] p-3 min-w-[340px] md:min-w-[400px] max-w-[400px] bg-white overflow-hidden flex-shrink-0 md:m-auto"
                                 >
                                     <Image
                                         src={trip.image}
                                         alt={trip.title}
                                         width={200}
                                         height={200}
-                                        className="w-full h-[300px] rounded-lg object-cover"
+                                        className="w-full h-[300px] rounded-t-lg object-contain"
                                     />
                                     <div className="mt-4">
                                         <h3 className="text-lg font-semibold">{trip.title}</h3>
                                         <p className="text-sm text-gray-600">{trip.location}</p>
                                         <p className="text-sm text-gray-600">{trip.date}</p>
-                                        <p className="text-blue-600 font-semibold mt-2">{trip.price}</p>
+                                        <div className='border  rounded-lg border-orange-600 flex flex-col justify-evenly mt-2'>
+                                            <p className='flex-1 text-[10px] bg-[rgb(253,244,244)] rounded-lg  p-2'>
+                                                STARTS FROM
+                                            </p>
+                                            <p className="text-emerald-600  flex-1 p-2 font-bold">
+                                                {trip.price}
+                                            </p>
+
+                                        </div>
+                                        
+
                                         <Link
                                             href={`https://wa.me/${whatsappNumber}?text=Hi, I'm interested in the ${trip.title} trip in ${trip.date}.`}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded-md text-sm hover:bg-green-700 transition"
+                                            className="inline-block border-orange-600 border-2 mt-4 px-4 py-2 bg-orange-600 text-white rounded-md text-sm hover:bg-orange-500 transition"
                                         >
                                             Book on WhatsApp
                                         </Link>

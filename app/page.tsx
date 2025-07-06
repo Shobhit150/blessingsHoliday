@@ -14,9 +14,9 @@ export default function Home() {
         
       <ContactUs/>
       </div>
-      <FaqSection/>
+     
       <TripSteps/>
-
+      <FaqSection/>
       <Footer/>
 
       

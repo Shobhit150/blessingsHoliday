@@ -4,7 +4,7 @@ import SearchOptions from './SearchOptions'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const videos = [
-    "/videos/output.mp4"
+    "/videos/IMG_2500.mp4"
 ]
 
 const rotatingWords = [

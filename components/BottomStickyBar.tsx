@@ -10,13 +10,13 @@ const BottomStickyBar = () => {
     setIsMounted(true)
   }, [])
 
-  if (!isMounted) return null // ⛔️ Skip rendering on server
+  if (!isMounted) return null
 
   return (
     <div className="fixed md:hidden bottom-0 left-0 w-full bg-white border-t border-gray-200 shadow-lg z-50">
       <div className="flex justify-between items-center text-sm font-medium text-black">
         <a
-          href="tel:+918076602635"
+          href="tel:+919140772033"
           className="w-full flex items-center justify-center gap-2 py-3 hover:bg-gray-100 transition"
           aria-label="Call Us"
         >
@@ -27,7 +27,7 @@ const BottomStickyBar = () => {
         <div className="w-[1px] bg-gray-300 h-6" />
 
         <a
-          href="https://wa.me/918076602635?text=Hi, I want to know more about your trips!"
+          href="https://wa.me/9140772033?text=Hi, I want to know more about your trips!"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full flex items-center justify-center gap-2 py-3 hover:bg-gray-100 transition"

@@ -49,7 +49,7 @@ const TripSteps = () => {
   }
 
   return (
-    <div className="py-16 px-4">
+    <div className="py-16 px-4 max-w-[1100] mx-auto">
       {/* Title */}
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-bold">How To Plan Your Stress-Free Trip</h2>
@@ -59,7 +59,7 @@ const TripSteps = () => {
       {/* Cards */}
       <div
         ref={scrollRef}
-        className="flex md:grid md:grid-cols-4 py-4 gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-2"
+        className="flex md:grid md:grid-cols-2 py-4 gap-10 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-2"
       >
         {steps.map((step, i) => (
           <div
@@ -73,7 +73,7 @@ const TripSteps = () => {
               <p className="text-sm text-gray-600">{step.description}</p>
             </div>
 
-            <div className="flex justify-between items-end border">
+            <div className="flex justify-between items-end">
               <Image
                 src={step.icon}
                 alt={step.title}
@@ -81,6 +81,7 @@ const TripSteps = () => {
                 height={50}
                 className="h-[70px] w-[70px] md:h-[100px] md:w-[100px] m-4"
               />
+              <div>
               <Image
                 src="/icons/box-cornering.webp"
                 alt="corner"
@@ -88,6 +89,8 @@ const TripSteps = () => {
                 height={50}
                 className="h-[60px] w-[60px] md:h-[100px] md:w-[100px]"
               />
+              </div>
+              
             </div>
           </div>
         ))}
