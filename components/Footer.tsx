@@ -40,12 +40,12 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Weekend Trips</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <Link href="/trip/corbett-nainital" className="hover:underline">
+              <Link href="/trips/corbett-nainital" className="hover:underline">
                 Jim Corbett & Nainital
               </Link>
             </li>
             <li>
-              <Link href="/trip/sarika-tiger-crocodile" className="hover:underline">
+              <Link href="/trips/sarika-tiger-crocodile" className="hover:underline">
                 Sariska Tiger and Crocodile
               </Link>
             </li>
