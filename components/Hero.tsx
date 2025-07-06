@@ -31,6 +31,7 @@ const Hero = () => {
         <div className='w-full h-[60vh] md:h-[75vh] relative'>
             <div>
                 {videos.map((src, idx) => (
+
                     <video
                         autoPlay
                         loop
@@ -38,6 +39,8 @@ const Hero = () => {
                         playsInline
                         preload="auto"
                         className="w-full h-full object-cover absolute"
+                        key={idx}
+                        src={src}
                     >
                         <source src="/videos/output.webm" type="video/webm" />
                         <source src="/videos/output.mp4" type="video/mp4" />
