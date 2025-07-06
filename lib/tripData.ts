@@ -62,9 +62,7 @@ export const trips: Trip[] = [
       "Water activities",
       "Room service and mineral water",
       "Anything not mentioned in the inclusions",
-      "Snow-chained vehicle",
       "Unforeseen weather/road issues",
-      "5% GST"
     ],
     batches: ["18 Jul 2025 - 20 Jul 2025"],
     thingsToPack: [
@@ -129,6 +127,9 @@ export const trips: Trip[] = [
       "Reusable water bottle"
     ]
   },
+
+
+
   {
     id: "corbett-nainital-2025-08",
     tag: "August 2025",
@@ -167,9 +168,8 @@ export const trips: Trip[] = [
       "Water activities",
       "Room service and mineral water",
       "Anything not mentioned in the inclusions",
-      "Snow-chained vehicle",
       "Unforeseen weather/road issues",
-      "5% GST"
+
     ],
     batches: ["18 August 2025 - 20 August 2025"],
     thingsToPack: [
@@ -233,7 +233,117 @@ export const trips: Trip[] = [
       "Shoes with grip",
       "Reusable water bottle"
     ]
-  },{
+  },
+  {
+    id: "manali-2025-08",
+    tag: "August 2025",
+    slug: "manali-baralachal",
+    title: "Manali - baralachal",
+    disclosed: false,
+    discription: "Ready to see Mountains?",
+    location: "Uttarakhand",
+    date: "18 Aug 2025 - 20 Aug 2025",
+    startDate: "2025-08-18",
+    endDate: "2025-08-20",
+    price: "₹-,---",
+    image: ["/trips_image/jim2.webp", "/trips_image/jim3.webp", "/trips_image/jim4.webp"],
+    duration: "2 Nights 3 Days",
+    pickup: "Delhi-Delhi",
+    category: "Weekend Trips",
+    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    overview:
+      "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
+    itinerary: [
+      "Day 1: Delhi to Jim Corbett - Arrival, Leisure Activities, Jungle Ride",
+      "Day 2: Drive to Nainital via Corbett Falls/Sarita Tal, Water Activities",
+      "Day 3: Nainital Mall Road - Leisure & Departure for Delhi (5:00 PM)"
+    ],
+    inclusions: [
+      "Delhi - Jim Corbett - Nainital - Delhi by AC Bus/Traveller",
+      "Hotel stay",
+      "Jeep Safari, Corbett Fall / Sarita Tal & Mall Road",
+      "Trekking",
+      "Bonfire",
+      "Musical Night"
+    ],
+    exclusions: [
+      "Extra meals",
+      "Personal expenses",
+      "Water activities",
+      "Room service and mineral water",
+      "Anything not mentioned in the inclusions",
+      "Unforeseen weather/road issues",
+
+    ],
+    batches: ["18 August 2025 - 20 August 2025"],
+    thingsToPack: [
+      "Rucksack with rain-cover",
+      "Sports shoes",
+      "Warm clothes & raincoat",
+      "Toiletries & cold cream",
+      "Power bank & torch",
+      "ID proofs & documents",
+      "Snacks, cash, reusable bottle"
+    ]
+  },
+  {
+    id: "yoga-2025-08",
+    tag: "August 2025",
+    slug: "nature-yoga-retreat",
+    title: "Nature Yoga retreat",
+    disclosed: false,
+    discription: "Ready to see Mountains?",
+    location: "Uttarakhand",
+    date: "18 Aug 2025 - 20 Aug 2025",
+    startDate: "2025-08-18",
+    endDate: "2025-08-20",
+    price: "₹-,---",
+    image: ["/trips_image/yoga.webp"],
+    duration: "2 Nights 3 Days",
+    pickup: "Delhi-Delhi",
+    category: "Weekend Trips",
+    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    overview:
+      "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
+    itinerary: [
+      "Day 1: Delhi to Jim Corbett - Arrival, Leisure Activities, Jungle Ride",
+      "Day 2: Drive to Nainital via Corbett Falls/Sarita Tal, Water Activities",
+      "Day 3: Nainital Mall Road - Leisure & Departure for Delhi (5:00 PM)"
+    ],
+    inclusions: [
+      "Delhi - Jim Corbett - Nainital - Delhi by AC Bus/Traveller",
+      "Hotel stay",
+      "Jeep Safari, Corbett Fall / Sarita Tal & Mall Road",
+      "Trekking",
+      "Bonfire",
+      "Musical Night"
+    ],
+    exclusions: [
+      "Extra meals",
+      "Personal expenses",
+      "Water activities",
+      "Room service and mineral water",
+      "Anything not mentioned in the inclusions",
+      "Unforeseen weather/road issues",
+
+    ],
+    batches: ["18 August 2025 - 20 August 2025"],
+    thingsToPack: [
+      "Rucksack with rain-cover",
+      "Sports shoes",
+      "Warm clothes & raincoat",
+      "Toiletries & cold cream",
+      "Power bank & torch",
+      "ID proofs & documents",
+      "Snacks, cash, reusable bottle"
+    ]
+  },
+
+
+
+
+
+  {
     id: "corbett-nainital-2025-09",
     tag: "September 2025",
     slug: "corbett-nainital",
@@ -271,9 +381,7 @@ export const trips: Trip[] = [
       "Water activities",
       "Room service and mineral water",
       "Anything not mentioned in the inclusions",
-      "Snow-chained vehicle",
       "Unforeseen weather/road issues",
-      "5% GST"
     ],
     batches: ["18 Sep 2025 - 20 Sep 2025"],
     thingsToPack: [
@@ -336,6 +444,110 @@ export const trips: Trip[] = [
       "Power bank",
       "Shoes with grip",
       "Reusable water bottle"
+    ]
+  },
+  {
+    id: "manali-2025-09",
+    tag: "September 2025",
+    slug: "manali-baralachal",
+    title: "Manali - baralachal",
+    disclosed: false,
+    discription: "Ready to see Mountains?",
+    location: "Uttarakhand",
+    date: "18 Aug 2025 - 20 Aug 2025",
+    startDate: "2025-08-18",
+    endDate: "2025-08-20",
+    price: "₹-,---",
+    image: ["/trips_image/manali2.webp", "/trips_image/manali3.webp", "/trips_image/manali4.webp"],
+    duration: "2 Nights 3 Days",
+    pickup: "Delhi-Delhi",
+    category: "Weekend Trips",
+    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    overview:
+      "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
+    itinerary: [
+      "Day 1: Delhi to Jim Corbett - Arrival, Leisure Activities, Jungle Ride",
+      "Day 2: Drive to Nainital via Corbett Falls/Sarita Tal, Water Activities",
+      "Day 3: Nainital Mall Road - Leisure & Departure for Delhi (5:00 PM)"
+    ],
+    inclusions: [
+      "Delhi - Jim Corbett - Nainital - Delhi by AC Bus/Traveller",
+      "Hotel stay",
+      "Jeep Safari, Corbett Fall / Sarita Tal & Mall Road",
+      "Trekking",
+      "Bonfire",
+      "Musical Night"
+    ],
+    exclusions: [
+      "Extra meals",
+      "Personal expenses",
+      "Water activities",
+      "Room service and mineral water",
+      "Anything not mentioned in the inclusions",
+      "Unforeseen weather/road issues",
+
+    ],
+    batches: ["18 August 2025 - 20 August 2025"],
+    thingsToPack: [
+      "Rucksack with rain-cover",
+      "Sports shoes",
+      "Warm clothes & raincoat",
+      "Toiletries & cold cream",
+      "Power bank & torch",
+      "ID proofs & documents",
+      "Snacks, cash, reusable bottle"
+    ]
+  },
+  {
+    id: "yoga-2025-09",
+    tag: "September 2025",
+    slug: "nature-yoga-retreat",
+    title: "Nature Yoga retreat",
+    disclosed: false,
+    discription: "Ready to see Mountains?",
+    location: "Uttarakhand",
+    date: "18 Aug 2025 - 20 Aug 2025",
+    startDate: "2025-08-18",
+    endDate: "2025-08-20",
+    price: "₹-,---",
+    image: ["/trips_image/yoga.webp"],
+    duration: "2 Nights 3 Days",
+    pickup: "Delhi-Delhi",
+    category: "Weekend Trips",
+    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    overview:
+      "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
+    itinerary: [
+      "Day 1: Delhi to Jim Corbett - Arrival, Leisure Activities, Jungle Ride",
+      "Day 2: Drive to Nainital via Corbett Falls/Sarita Tal, Water Activities",
+      "Day 3: Nainital Mall Road - Leisure & Departure for Delhi (5:00 PM)"
+    ],
+    inclusions: [
+      "Delhi - Jim Corbett - Nainital - Delhi by AC Bus/Traveller",
+      "Hotel stay",
+      "Jeep Safari, Corbett Fall / Sarita Tal & Mall Road",
+      "Trekking",
+      "Bonfire",
+      "Musical Night"
+    ],
+    exclusions: [
+      "Extra meals",
+      "Personal expenses",
+      "Water activities",
+      "Room service and mineral water",
+      "Anything not mentioned in the inclusions",
+      "Unforeseen weather/road issues",
+
+    ],
+    batches: ["18 August 2025 - 20 August 2025"],
+    thingsToPack: [
+      "Rucksack with rain-cover",
+      "Sports shoes",
+      "Warm clothes & raincoat",
+      "Toiletries & cold cream",
+      "Power bank & torch",
+      "ID proofs & documents",
+      "Snacks, cash, reusable bottle"
     ]
   }
   
