@@ -250,7 +250,7 @@ export const trips: Trip[] = [
     duration: "2 Nights 3 Days",
     pickup: "Delhi-Delhi",
     category: "Weekend Trips",
-    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    tags: [],
     overview:
       "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
     itinerary: [
@@ -302,7 +302,7 @@ export const trips: Trip[] = [
     duration: "2 Nights 3 Days",
     pickup: "Delhi-Delhi",
     category: "Weekend Trips",
-    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    tags: [],
     overview:
       "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
     itinerary: [
@@ -462,7 +462,7 @@ export const trips: Trip[] = [
     duration: "2 Nights 3 Days",
     pickup: "Delhi-Delhi",
     category: "Weekend Trips",
-    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    tags: [],
     overview:
       "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
     itinerary: [
@@ -514,7 +514,7 @@ export const trips: Trip[] = [
     duration: "2 Nights 3 Days",
     pickup: "Delhi-Delhi",
     category: "Weekend Trips",
-    tags: ["Bonfire", "Stay", "Meals", "Trekking", "Explorations"],
+    tags: [],
     overview:
       "Embark on a cinematic journey through the wild and the wonderful! Experience the thrill of the untamed jungles of Jim Corbett and the magical charm of Nainital's lakes and hills. Think 'Yeh Jawaani Hai Deewani' — bonfires under the stars, laughter echoing through the valleys, and stories you'll be telling for years.",
     itinerary: [
