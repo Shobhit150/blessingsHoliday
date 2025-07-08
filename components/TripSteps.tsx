@@ -5,25 +5,25 @@ import React, { useRef, useState } from 'react'
 
 const steps = [
   {
-    
+
     title: 'Choose Your Travel Destination',
     description: 'From a buffet of trip itineraries handcrafted by our travel experts.',
     bgImage: '/images/trip_step1.webp',
   },
   {
-    
+
     title: 'Ask Queries & Book Your Trip!',
     description: 'Connect with us over a call, solve your queries and book your trip.',
     bgImage: '/images/trip_step2.webp',
   },
   {
-   
+
     title: 'Ohai, Your Trip Day Has Arrived',
     description: 'Keep your adventure spirit high and pack your bags for a lifetime experience.',
     bgImage: '/images/trip_step2.webp',
   },
   {
-    
+
     title: 'Share #InstaPerfect Memories...',
     description: 'Flaunt your memorable travel memories over social media with your dear ones.',
     bgImage: '/images/trip_step1.webp',
@@ -79,7 +79,7 @@ const TripSteps = () => {
               <p className="text-sm text-gray-600">{step.description}</p>
             </div>
 
-            
+
           </div>
         ))}
 
@@ -119,9 +119,24 @@ const TripSteps = () => {
       <div className="mt-12 text-center text-sm text-gray-800">
         <p className="mb-2 font-medium">Call us or drop a Hi on WhatsApp at</p>
         <div className="flex justify-center gap-4 text-lg items-center text-blue-600 font-semibold">
-          <FaPhoneAlt /> +91 7838800808
+          {/* Phone Link */}
+          <a href="tel:+917838800808" className="flex items-center gap-2 hover:underline">
+            <FaPhoneAlt />
+            +91 7838800808
+          </a>
+
           <span className="mx-2">|</span>
-          <FaWhatsapp className="text-green-600" /> WhatsApp
+
+          {/* WhatsApp Link */}
+          <a
+            href="https://wa.me/917838800808?text=Hey%20there!%20👋%20I'm%20interested%20in%20knowing%20more%20about%20your%20upcoming%20trips%20✈️%20🌄%20Please%20share%20the%20details!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-green-600 hover:underline"
+          >
+            <FaWhatsapp />
+            WhatsApp
+          </a>
         </div>
       </div>
     </div>
