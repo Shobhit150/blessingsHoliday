@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import BottomStickyBar from "@/components/BottomStickyBar";
 import RightSideBar from "@/components/RightSideBar";
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,6 +37,7 @@ export default function RootLayout({
         {children}
         <BottomStickyBar />
         <RightSideBar/>
+        <SpeedInsights />
         <Analytics />
       </body>
       
