@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import BottomStickyBar from "@/components/BottomStickyBar";
 import RightSideBar from "@/components/RightSideBar";
-
+import { Analytics } from '@vercel/analytics/react'
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,7 +35,9 @@ export default function RootLayout({
         {children}
         <BottomStickyBar />
         <RightSideBar/>
+        <Analytics />
       </body>
+      
     </html>
   );
 }
