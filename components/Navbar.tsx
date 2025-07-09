@@ -38,10 +38,10 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
-      <div className="flex flex-row justify-between items-center px-6 py-3 max-w-[1150px] mx-auto relative">
+      <div className="flex flex-row justify-between items-center px-8 py-3 max-w-[1150px] mx-auto relative">
         {/* Logo */}
         <Link href="/">
-          <Image src="/images/logo5.webp" alt="logo" width={60} height={60} />
+          <Image src="/images/logo5.webp" alt="logo" width={80} height={80} />
         </Link>
 
         {/* Desktop Nav */}
