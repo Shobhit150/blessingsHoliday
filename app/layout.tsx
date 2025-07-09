@@ -17,22 +17,36 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Blessings Holiday - Curated Group Trips from Delhi",
-  description: "Join fun-filled weekend group trips from Delhi to Jim Corbett, Nainital, Manali, Sariska & more. Book your adventure today!",
-  keywords: "Delhi group trips, Jim Corbett, Nainital, Manali, Sariska, weekend getaways, adventure travel",
+// app/layout.tsx
+export const metadata = {
+  title: "Blessings Holiday | Group Travel Adventures",
+  description: "Explore curated travel experiences with Blessings Holiday. Group trips, nature getaways, and unforgettable journeys across India.",
+  keywords: ["travel", "group trips", "Blessings Holiday", "trekking", "nature"],
+  metadataBase: new URL("https://www.blessingsholiday.com"),
   openGraph: {
     title: "Blessings Holiday",
-    description: "Curated group trips for young travelers. Adventure, fun, and new friendships await!",
+    description: "Your next adventure starts here.",
     url: "https://www.blessingsholiday.com",
     siteName: "Blessings Holiday",
+    images: [
+      {
+        url: "/images/logo5.webp",
+        width: 1200,
+        height: 630,
+        alt: "Blessings Holiday",
+      },
+    ],
+    locale: "en_US",
     type: "website",
-    locale: "en_IN",
   },
-  alternates: {
-    canonical: "https://www.blessingsholiday.com",
+  twitter: {
+    card: "summary_large_image",
+    title: "Blessings Holiday",
+    description: "Your next adventure starts here.",
+    images: ["/images/logo5.webp"],
   },
 };
+
 
 export default function RootLayout({
   children,
@@ -41,6 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-site-verification" content="xqCFsqBWvYxFZ-yQRVtLwam1g7UQiUqqFl4U7tWg3Vk" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.blessingsholiday.com
+
+# Sitemaps
+Sitemap: https://www.blessingsholiday.com/sitemap.xml
