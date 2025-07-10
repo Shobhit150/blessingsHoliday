@@ -47,7 +47,7 @@ const Details = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="border shadow-xl shadow-gray-300 rounded-[14px] p-3 min-w-[340px] md:min-w-[400px] max-w-[400px] bg-white overflow-hidden flex-shrink-0 md:m-auto"
+                  className="border shadow-xl shadow-gray-300 rounded-[14px] p-3  md:min-w-[400px] max-w-[400px] bg-white overflow-hidden flex-shrink-0 md:m-auto"
                 >
                   <Link href={`/trips/${trip.slug}`} className="block">
                     <Image
@@ -55,7 +55,7 @@ const Details = () => {
                       alt={trip.title}
                       width={200}
                       height={200}
-                      className="w-full h-[300px] rounded-t-lg object-cover"
+                      className="w-[270px] md:w-full h-[200px] md:h-[300px] rounded-t-lg object-cover"
                     />
                     <div className="mt-4">
                       <h3 className="text-lg font-semibold">{trip.title}</h3>
