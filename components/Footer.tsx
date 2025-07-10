@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import {
   FaInstagram,
   FaFacebookF,
@@ -8,6 +9,7 @@ import {
 } from 'react-icons/fa6'
 import Link from 'next/link'
 import { trips } from '@/lib/tripData'
+import { FaPhone, FaEnvelope } from 'react-icons/fa6'
 const seenTitles = new Set<string>()
 const destinations = trips
   .filter(trip => {
@@ -22,6 +24,8 @@ const destinations = trips
   }))
 
 const Footer = () => {
+  const [num, setNum] = useState<string>('+91 78388 00808');
+
   return (
     <footer className="bg-gray-900 text-white px-6 py-12 mt-10 pt-20 pb-20">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -50,17 +54,17 @@ const Footer = () => {
 
         {/* Popular Weekend Trips */}
         <div>
-  <h3 className="text-lg font-semibold mb-4">Weekend Trips</h3>
-  <ul className="space-y-2 text-sm text-gray-300">
-    {destinations.map((dest) => (
-      <li key={dest.id}>
-        <Link href={`/trips/${dest.slug}`} className="hover:underline">
-          {dest.title}
-        </Link>
-      </li>
-    ))}
-  </ul>
-</div>
+          <h3 className="text-lg font-semibold mb-4">Weekend Trips</h3>
+          <ul className="space-y-2 text-sm text-gray-300">
+            {destinations.map((dest) => (
+              <li key={dest.id}>
+                <Link href={`/trips/${dest.slug}`} className="hover:underline">
+                  {dest.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         {/* Social Links */}
         <div>
@@ -127,14 +131,15 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-          <p className="text-sm text-gray-300">
-            11, Rani Jhansi road,  <br />
-            New Delhi- 110055
+          <p className="text-sm text-gray-300 mt-2 flex items-center gap-2">
+            <FaPhone className="inline-block" />
+            <span>+91 78388 00808</span>
           </p>
-          <p className="text-sm text-gray-300 mt-2">
-            📞 +91 78388 00808<br />
-            ✉️ info@blessingsholiday.com
+          <p className="text-sm text-gray-300 mt-2 flex items-center gap-2">
+            <FaEnvelope className="inline-block" />
+            <span>info@blessingsholiday.com</span>
           </p>
+
         </div>
       </div>
     </footer>

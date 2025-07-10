@@ -24,7 +24,7 @@ const Hero = () => {
 
 
     return (
-        <div className='w-full h-[45vh] md:h-[75vh] relative'>
+        <div className='w-full h-[40vh] md:h-[75vh] relative'>
             <div>
                 <video
                     autoPlay
