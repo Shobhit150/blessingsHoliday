@@ -6,7 +6,7 @@ const ContactUs = () => {
   return (
     <div
       id="ContactUs"
-      className="relative overflow-hidden rounded-[30px] max-w-[1100px] mx-6 my-8 "
+      className="relative overflow-hidden rounded-[30px] max-w-[1100px] mx-6 md:mx-auto my-8 "
     >
       {/* ✅ Background Image */}
       <div className="absolute inset-0 z-0 opacity-80">
