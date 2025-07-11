@@ -6,7 +6,7 @@ import BottomStickyBar from "@/components/BottomStickyBar";
 import RightSideBar from "@/components/RightSideBar";
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import { GoogleAnalytics } from "nextjs-google-analytics";
+
 import ClientAnalytics from "@/components/ClientAnalytics";
 
 const geistSans = Geist({
