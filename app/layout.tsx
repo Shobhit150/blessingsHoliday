@@ -6,6 +6,7 @@ import BottomStickyBar from "@/components/BottomStickyBar";
 import RightSideBar from "@/components/RightSideBar";
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,32 +57,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        
+
         {/* SEO: Google site verification */}
         <meta name="google-site-verification" content="xqCFsqBWvYxFZ-yQRVtLwam1g7UQiUqqFl4U7tWg3Vk" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-        <link rel="manifest" href="/site.webmanifest"/>
-        {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
 
-        
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png" />
-
-        
+        {/* Apple icons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-        
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Blessings Holiday" />
+        {/* Web manifest */}
+        <link rel="manifest" href="/site.webmanifest" />
 
-        
+        {/* Mask icon for Safari pinned tabs */}
+        <link rel="mask-icon" href="/logo10.svg" color="#5bbad5" />
+
+        {/* Theme color */}
         <meta name="theme-color" content="#ffffff" />
+
+        {/* Viewport and charset */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </head>
@@ -93,6 +87,7 @@ export default function RootLayout({
         {children}
         <BottomStickyBar />
         <RightSideBar />
+        <GoogleAnalytics gaMeasurementId="G-R7BFCYDJR4" />
         <SpeedInsights />
         <Analytics />
       </body>
