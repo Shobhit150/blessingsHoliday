@@ -132,6 +132,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
           <p className="text-sm text-gray-300 mt-2 flex items-center gap-2">
+            
+            <span>11, Rani Jhansi Road <br/> New Delhi</span>
+          </p>
+          <p className="text-sm text-gray-300 mt-2 flex items-center gap-2">
             <FaPhone className="inline-block" />
             <span>+91 78388 00808</span>
           </p>
