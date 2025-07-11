@@ -9,7 +9,8 @@ import {
 } from 'react-icons/fa6'
 import Link from 'next/link'
 import { trips } from '@/lib/tripData'
-import { FaPhone, FaEnvelope } from 'react-icons/fa6'
+import { FaPhone, FaEnvelope, FaLocationDot } from 'react-icons/fa6'
+
 const seenTitles = new Set<string>()
 const destinations = trips
   .filter(trip => {
@@ -131,10 +132,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-          <p className="text-sm text-gray-300 mt-2 flex items-center gap-2">
-            
-            <span>11, Rani Jhansi Road <br/> New Delhi</span>
-          </p>
+          <div>
           <p className="text-sm text-gray-300 mt-2 flex items-center gap-2">
             <FaPhone className="inline-block" />
             <span>+91 78388 00808</span>
@@ -143,7 +141,12 @@ const Footer = () => {
             <FaEnvelope className="inline-block" />
             <span>info@blessingsholiday.com</span>
           </p>
-
+          <p className="text-sm text-gray-300 mt-2 flex gap-2 items-start">
+            <FaLocationDot size={16} className="inline-block" />
+            <span>11, Rani Jhansi Road <br/> New Delhi</span>
+          </p>
+          </div>
+          
         </div>
       </div>
     </footer>

@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { motion } from 'framer-motion'
-import Image from 'next/image'
+
 import Link from 'next/link'
 
 const whatsappNumber = '917838800808'
@@ -67,7 +66,7 @@ const AboutUs = () => {
       </section>
 
       {/* Why Travel With Us */}
-      <section className="text-center space-y-6">
+      {/* <section className="text-center space-y-6">
         <h2 className="text-3xl font-bold text-orange-600">Why Travel With Us?</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm font-medium">
           {[
@@ -82,7 +81,7 @@ const AboutUs = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Footer CTA */}
       <section className="text-center mt-12 space-y-4">
