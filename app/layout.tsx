@@ -58,25 +58,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        
-
-        {/* SEO: Google site verification */}
         <meta name="google-site-verification" content="xqCFsqBWvYxFZ-yQRVtLwam1g7UQiUqqFl4U7tWg3Vk" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
-
-        {/* Apple icons */}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-
-        {/* Web manifest */}
         <link rel="manifest" href="/site.webmanifest" />
-
-        {/* Mask icon for Safari pinned tabs */}
         <link rel="mask-icon" href="/logo10.svg" color="#5bbad5" />
-
-        {/* Theme color */}
         <meta name="theme-color" content="#ffffff" />
-
-        {/* Viewport and charset */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
       </head>
